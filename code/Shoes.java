@@ -6,9 +6,10 @@ public class Shoes extends Product {
 	private String Color; 
 	private String Brand;
 	
-	public Shoes(String myName, double myPrice, String myDescription) {
+	public Shoes(String myName, double myPrice, String myDescription, String color,String brand) {
 		super(myName, myPrice);
-		
+		Color = color;
+		Brand = brand;
 	}
 
 	@Override
@@ -22,6 +23,12 @@ public class Shoes extends Product {
 
 	public void setSize(int s) {
 		size = s; 
+	}
+
+	@Override
+	public void setDescription() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
