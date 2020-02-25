@@ -3,7 +3,7 @@ package code;
 public class Shoes extends Product {
 
 	public Shoes(String myName, double myPrice, String myDescription) {
-		super(myName, myPrice, myDescription);
+		super(myName, myPrice);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -13,11 +13,8 @@ public class Shoes extends Product {
 		return null;
 	}
 
-	@Override
-	public void setDate() {
-		// TODO Auto-generated method stub
 		
-	}
+	
 
 	@Override
 	public void setDescription() {

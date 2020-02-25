@@ -7,17 +7,14 @@ public abstract class Product {
 	private String description; 
 	 
 	
-	public Product(String myName, double myPrice, String myDescription)
+	public Product(String myName, double myPrice)
 	{
 		name = myName; 
 		price = myPrice; 
-		description = myDescription; 
 	}
 	
 	public abstract String toString();
-	
-	public abstract void setDate();
-	
+		
 	public abstract void setDescription();
 	
 	public void setName(String myName)
@@ -25,10 +22,6 @@ public abstract class Product {
 		name = myName; 
 	}
 	
-	public String getDescription()
-	{
-		return description; 
-	}
 	
 	public String getName()
 	{
