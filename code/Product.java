@@ -15,7 +15,6 @@ public abstract class Product {
 	
 	public abstract String toString();
 		
-	public abstract void setDescription();
 	
 	public void setName(String myName)
 	{

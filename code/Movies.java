@@ -26,7 +26,6 @@ public class Movies extends Product{
 		
 	}
 	
-	
 	public String getLength()
 	{
 		return length;
@@ -49,7 +48,7 @@ public class Movies extends Product{
 	
 	public String makeDescription()
 	{
-		String description = getPrice() + "\n" + getLength();
+		String description = getPrice() + "\n" + getLength() + "\n" + toString();
 		return description; 
 	}
 
