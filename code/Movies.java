@@ -7,17 +7,15 @@ public class Movies extends Product{
 	private char MPA; 
 	private String length; 
 	private String release; 
-	//private static String price; 
 	
-	public Movies(String myGenre, String myName, String myDescription, double myPrice, double myReview, char myRating, String myLength, String myRelease)
+	public Movies(String myGenre, String myName, double myPrice, double myReview, char myRating, String myLength, String myRelease)
 	{
 		super(myName, myPrice);
-		myGenre = genre; 
-		myReview = IMDb;
-		myRating = MPA; 
-		myLength = length; 
-		myRelease = release; 
-		
+		genre = myGenre; 
+		IMDb = myReview;
+		MPA = myRating; 
+		length = myLength; 
+		release = myRelease;
 		
 	}
 	
@@ -28,13 +26,37 @@ public class Movies extends Product{
 		
 	}
 	
-	public void setDescription()
+	
+	public String getLength()
 	{
-		String description = price + "\n"; 
+		return length;
+	}
+	
+	public double getRating()
+	{
+		return MPA; 
+	}
+	
+	public String getDate()
+	{
+		return release; 
+	}
+	
+	public double getReview()
+	{
+		return IMDb; 
+	}
+	
+	public String makeDescription()
+	{
+		String description = getPrice() + "\n" + getLength();
+		return description; 
 	}
 
 	public static void main(String[] args)
 	{
-		System.out.print(price);
+		Movies prod = new Movies("horror", "Nightmares", 11.20, 7.2, 'R', "3 hr 12 min", "Sept 2020");
+		String description = prod.makeDescription();
+		System.out.print(description);
 	}
 }
