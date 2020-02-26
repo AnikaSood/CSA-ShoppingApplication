@@ -6,13 +6,12 @@ public class Shoes extends Product {
 	private String Color; 
 	private String Brand;
 	private String Description;
-	private double price;
-	private String name; 
+	
 	
 	public Shoes(String myName, double myPrice, String myDescription, String color,String brand) {
 		super(myName, myPrice);
-		name = myName; 
-		price = myPrice; 
+		//name = myName; 
+		//price = myPrice; 
 		Description = myDescription;
 		Color = color;
 		Brand = brand;
@@ -20,12 +19,9 @@ public class Shoes extends Product {
 
 	@Override
 	public String toString() {
-		
-		return name;
+		String a = this.getName();
+		return a;
 	}
-
-		
-	
 
 	public void setSize(int s) {
 		size = s; 
@@ -41,10 +37,6 @@ public class Shoes extends Product {
 	
 	public String getBrand() {
 		return Brand; 
-	}
-	
-	public double getPrice() {
-		return price; 
 	}
 	
 	public String getDescription()
