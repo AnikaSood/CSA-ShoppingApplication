@@ -7,6 +7,7 @@ public class Books extends Product {
 	private String type; 
 	private int pages; 
 	private String release; 
+
 	
 	public Books(String myName, double myPrice, String myGenre, String myCondition, String myType, int myPages, String myDate)
 	{
@@ -16,6 +17,7 @@ public class Books extends Product {
 		type = myType; 
 		pages = myPages; 
 		release = myDate; 
+		getPrice();
 	}
 	
 	public String toString()
@@ -41,7 +43,18 @@ public class Books extends Product {
 	
 	public String getCondition()
 	{
+		return condition; 
+	}
+	
+	public String getType()
+	{
+		return type; 
+	}
+	
+	public double priceAdjust(String condition, String type)
+	{
 		double price = getPrice();
+
 		if (condition.equals("like new"))
 		{
 			price-=(0.10*price); 
@@ -62,12 +75,37 @@ public class Books extends Product {
 		{
 			price = price; 
 		}
-		return condition; 
+		
+		if(type.equals("Kindle"))
+		{
+			price-=(0.12*price);
+		}
+		
+		else if(type.equals("Paperback"))
+		{
+			price = price;
+		}
+		
+		else if(type.equals("Hardcover"))
+		{
+			price+=(0.12*price);
+		}
+		
+		return price; 
 	}
 	
-	public String getType()
+	public String makeDescription()
 	{
-		return type; 
+		String description = getName() + "\n" + priceAdjust(condition, type) + "\n" + genre + "\n" + pages;
+		return description; 
 	}
+	
+	public static void main(String[] args)
+	{
+		Books book = new Books("Hunger Games", 21.50, "Dystopian", "used, poor", "kindle", 430, "Sept 2020");
+		String des = book.makeDescription();
+		System.out.print(des);
+	}
+	
 	
 }
