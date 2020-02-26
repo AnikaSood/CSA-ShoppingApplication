@@ -13,10 +13,6 @@ public class SchoolSupplies extends Product{
 		return null;
 	}
 
-	@Override
-	public void setDescription() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }

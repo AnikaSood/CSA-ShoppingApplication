@@ -25,10 +25,6 @@ public class Shoes extends Product {
 		size = s; 
 	}
 
-	@Override
-	public void setDescription() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }
