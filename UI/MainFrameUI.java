@@ -56,6 +56,26 @@ public class MainFrameUI extends JFrame {
 		
 		
 		java.awt.Image image = new ImageIcon("ui/KPLogo.jpg").getImage();
+		java.awt.Image cart = new ImageIcon("ui/rsz_shopping_cart_large.png").getImage();
+		
+		
+		JButton btnCart = new JButton("");
+		btnCart.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		btnCart.setForeground(Color.WHITE);
+		btnCart.setRequestFocusEnabled(false);
+		btnCart.setOpaque(true);
+		btnCart.setBorderPainted(false);
+		btnCart.setBackground(Color.WHITE);
+		btnCart.setBounds(1309, 6, 39, 39);
+		frame.getContentPane().add(btnCart);
+		btnCart.setIcon(new ImageIcon(cart));
+		
+		JButton btnSearch = new JButton("Search");
+		btnSearch.setBorderPainted(false);
+		btnSearch.setBackground(Color.ORANGE);
+		btnSearch.setOpaque(true);
+		btnSearch.setBounds(1185, 6, 99, 39);
+		frame.getContentPane().add(btnSearch);
 		
 		JTextArea txtrSearchBar = new JTextArea();
 		txtrSearchBar.setDragEnabled(false);
@@ -63,11 +83,11 @@ public class MainFrameUI extends JFrame {
 		txtrSearchBar.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		txtrSearchBar.setBounds(308, 17, 778, 16);
 		frame.getContentPane().add(txtrSearchBar);
+		
 		JLabel logo = new JLabel("");
 		logo.setBounds(28, 6, 80, 39);
 		frame.getContentPane().add(logo);
-		
-		
+	
 		logo.setIcon(new ImageIcon(image));
 		
 		JPanel panel = new JPanel();
@@ -114,7 +134,7 @@ public class MainFrameUI extends JFrame {
 		
 		JLabel label = new JLabel("            ");
 		label.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(169, 169, 169)));
-		label.setBounds(259, 6, 828, 39);
+		label.setBounds(259, 6, 952, 39);
 		frame.getContentPane().add(label);
 		label.setBackground(Color.WHITE);
 		label.setOpaque(true);
