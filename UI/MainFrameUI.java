@@ -19,6 +19,10 @@ import java.awt.ComponentOrientation;
 
 public class MainFrameUI extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 
 	/**
