@@ -41,16 +41,10 @@ public class MainFrameUI extends JFrame {
 	 * Create the application.
 	 */
 	public MainFrameUI() {
-		initialize();
-	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
+	
 		frame = new JFrame();
 		frame.setBackground(Color.WHITE);
-		frame.getContentPane().setBackground(new Color(220, 220, 220));
+		frame.getContentPane().setBackground(Color.WHITE);
 		frame.getContentPane().setLayout(null);
 		
 		
@@ -83,12 +77,8 @@ public class MainFrameUI extends JFrame {
 		txtrSearchBar.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		txtrSearchBar.setBounds(308, 17, 778, 16);
 		frame.getContentPane().add(txtrSearchBar);
-		
-		JLabel logo = new JLabel("");
-		logo.setBounds(28, 6, 80, 39);
-		frame.getContentPane().add(logo);
 	
-		logo.setIcon(new ImageIcon(image));
+		
 		
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(211, 211, 211));
@@ -139,13 +129,28 @@ public class MainFrameUI extends JFrame {
 		label.setBackground(Color.WHITE);
 		label.setOpaque(true);
 		
+		JButton homeButton = new JButton("");
+		homeButton.setRequestFocusEnabled(false);
+		homeButton.setOpaque(true);
+		homeButton.setForeground(Color.WHITE);
+		homeButton.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		homeButton.setBorderPainted(false);
+		homeButton.setBackground(Color.WHITE);
+		homeButton.setBounds(28, 6, 82, 39);
+		frame.getContentPane().add(homeButton);
 		
+		homeButton.setIcon(new ImageIcon(image));
 		
 		JLabel label_1 = new JLabel("            ");
 		label_1.setOpaque(true);
 		label_1.setBackground(new Color(255, 255, 255));
 		label_1.setBounds(0, 0, 1370, 50);
 		frame.getContentPane().add(label_1);
+		
+		JLabel label_2 = new JLabel("");
+		label_2.setOpaque(true);
+		label_2.setBounds(0, 53, 1370, 7);
+		frame.getContentPane().add(label_2);
 		frame.setBounds(0, 0, 1370, 775);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
