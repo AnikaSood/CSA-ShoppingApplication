@@ -9,6 +9,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.MatteBorder;
+
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.SystemColor;
@@ -16,6 +18,8 @@ import javax.swing.JTextArea;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.ComponentOrientation;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class MainFrameUI extends JFrame {
 
@@ -49,6 +53,10 @@ public class MainFrameUI extends JFrame {
 		frame = new JFrame();
 		frame.setBackground(Color.WHITE);
 		frame.getContentPane().setBackground(Color.WHITE);
+		
+		frame.setBounds(0, 0, 1370, 775);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		frame.getContentPane().setLayout(null);
 		
 		
@@ -58,6 +66,15 @@ public class MainFrameUI extends JFrame {
 		
 		
 		JButton btnCart = new JButton("");
+		
+		//WHEN CART BUTTON IS CLICKED, IT WILL OPEN CARTUI
+		btnCart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CartUI x = new CartUI();
+				x.setVisible(true);
+				
+			}
+		});
 		btnCart.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		btnCart.setForeground(Color.WHITE);
 		btnCart.setRequestFocusEnabled(false);
@@ -155,8 +172,7 @@ public class MainFrameUI extends JFrame {
 		label_2.setOpaque(true);
 		label_2.setBounds(0, 53, 1370, 7);
 		frame.getContentPane().add(label_2);
-		frame.setBounds(0, 0, 1370, 775);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		
 		//CATEGORIES HOVER
 		btnCategories_1.addMouseListener(new MouseAdapter() {
