@@ -21,6 +21,7 @@ public abstract class Product {
 		name = myName; 
 	}
 	
+	public abstract String makeDescription();
 	
 	public String getName()
 	{

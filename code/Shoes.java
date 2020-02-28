@@ -5,16 +5,16 @@ public class Shoes extends Product {
 	private int size; 
 	private String Color; 
 	private String Brand;
-	private String Description;
+	private String type; 
 	
 	
-	public Shoes(String myName, double myPrice, String myDescription, String color,String brand) {
+	public Shoes(String myName, double myPrice, String color,String brand, String myType) {
 		super(myName, myPrice);
 		//name = myName; 
 		//price = myPrice; 
-		Description = myDescription;
 		Color = color;
 		Brand = brand;
+		type = myType; 
 	}
 
 	@Override
@@ -39,10 +39,16 @@ public class Shoes extends Product {
 		return Brand; 
 	}
 	
-	public String getDescription()
+	
+	public String getType()
 	{
-		return Description;
-		
+		return type; 
+	}
+	
+	public String makeDescription() 
+	{
+		String des = getName() + "\n" + getPrice() + "\n"+ Color + "\n" + Brand; 
+		return des; 
 	}
 	
 	
