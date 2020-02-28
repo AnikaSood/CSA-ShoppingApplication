@@ -60,5 +60,21 @@ public class Storage {
 	{
 		return products;
 	}
+	
+	
+	public static void main(String[]args)
+	{
+		Storage store = new Storage();
+				
+				List<Product> prods = new ArrayList<Product>();
+		
+		prods = store.getProds();
+		
+		for(int i = 0; i<5; i++)
+		{
+			System.out.println(prods.get(i).makeDescription());
+		}
+				
+	}
 
 }

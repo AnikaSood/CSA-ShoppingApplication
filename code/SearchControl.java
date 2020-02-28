@@ -2,8 +2,9 @@ package code;
 import java.util.ArrayList;
 import java.util.List;
 
-import chn.util.*; 
-import apcslib.*;
+import chn.util.*;
+import chn.util.FileInput;
+import chn.util.FileOutput;
 public class SearchControl {
 	
 Storage store = new Storage();
@@ -64,7 +65,7 @@ List<FileInput> readFiles = new ArrayList<FileInput>();
 	public static void main(String[] args)
 	{
 		SearchControl search = new SearchControl();
-		
+		search.searchReturn("Catcher");
 	}
 	
 

@@ -16,5 +16,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/Family/Documents/APCS/APCS install 2/extra libraries/chndocs.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
