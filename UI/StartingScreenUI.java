@@ -21,11 +21,7 @@ import java.awt.ComponentOrientation;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class MainFrameUI extends JFrame {
-
-	/**
-	 * 
-	 */
+public class StartingScreenUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 
@@ -36,7 +32,7 @@ public class MainFrameUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainFrameUI window = new MainFrameUI();
+					StartingScreenUI window = new StartingScreenUI();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +44,7 @@ public class MainFrameUI extends JFrame {
 	/**
 	 * Create the application.
 	 */
-	public MainFrameUI() {
+	public StartingScreenUI() {
 	
 		frame = new JFrame();
 		frame.setBackground(Color.WHITE);

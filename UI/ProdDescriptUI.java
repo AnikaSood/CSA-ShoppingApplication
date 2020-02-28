@@ -21,7 +21,7 @@ import java.awt.ComponentOrientation;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class CartUI extends JFrame {
+public class ProdDescriptUI extends JFrame {
 
 	/**
 	 * 
@@ -29,7 +29,7 @@ public class CartUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 
-	public CartUI() {
+	public ProdDescriptUI() {
 	
 		frame = new JFrame();
 		frame.setBackground(Color.WHITE);
@@ -146,15 +146,6 @@ public class CartUI extends JFrame {
 		label_2.setOpaque(true);
 		label_2.setBounds(0, 53, 1370, 7);
 		frame.getContentPane().add(label_2);
-		
-		JLabel label_3 = new JLabel("");
-		label_3.setOpaque(true);
-		label_3.setBounds(0, 163, 1370, 149);
-		frame.getContentPane().add(label_3);
-		
-		JLabel lblYourCart = new JLabel("Your Cart");
-		lblYourCart.setBounds(6, 125, 61, 16);
-		frame.getContentPane().add(lblYourCart);
 		
 		
 		//CATEGORIES HOVER
