@@ -20,6 +20,7 @@ import java.awt.Font;
 import java.awt.ComponentOrientation;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.UIManager;
 
 public class ProdDescriptUI extends JFrame {
 
@@ -146,6 +147,39 @@ public class ProdDescriptUI extends JFrame {
 		label_2.setOpaque(true);
 		label_2.setBounds(0, 53, 1370, 7);
 		frame.getContentPane().add(label_2);
+		
+		JLabel label_3 = new JLabel("");
+		label_3.setOpaque(true);
+		label_3.setBounds(55, 107, 433, 357);
+		frame.getContentPane().add(label_3);
+		
+		JLabel lblProductName = new JLabel("Product Name");
+		lblProductName.setFont(new Font("Lucida Grande", Font.PLAIN, 37));
+		lblProductName.setBounds(55, 476, 297, 39);
+		frame.getContentPane().add(lblProductName);
+		
+		JLabel label_4 = new JLabel("$");
+		label_4.setFont(new Font("Lucida Grande", Font.PLAIN, 27));
+		label_4.setBounds(55, 509, 224, 39);
+		frame.getContentPane().add(label_4);
+		
+		JLabel lblDescription = new JLabel("Description:");
+		lblDescription.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		lblDescription.setBounds(527, 107, 297, 39);
+		frame.getContentPane().add(lblDescription);
+		
+		JTextArea txtrDfghj = new JTextArea();
+		txtrDfghj.setBackground(UIManager.getColor("Button.background"));
+		txtrDfghj.setText("The Description Goes Here");
+		txtrDfghj.setBounds(527, 173, 778, 508);
+		frame.getContentPane().add(txtrDfghj);
+		
+		JButton btnAddToCart = new JButton("Add to Cart");
+		btnAddToCart.setBackground(Color.ORANGE);
+		btnAddToCart.setBorderPainted(false);
+		btnAddToCart.setOpaque(true);
+		btnAddToCart.setBounds(55, 560, 182, 29);
+		frame.getContentPane().add(btnAddToCart);
 		
 		
 		//CATEGORIES HOVER
