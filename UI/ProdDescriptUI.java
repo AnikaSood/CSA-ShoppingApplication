@@ -171,14 +171,14 @@ public class ProdDescriptUI extends JFrame {
 		JTextArea txtrDfghj = new JTextArea();
 		txtrDfghj.setBackground(UIManager.getColor("Button.background"));
 		txtrDfghj.setText("The Description Goes Here");
-		txtrDfghj.setBounds(527, 173, 778, 508);
+		txtrDfghj.setBounds(537, 158, 778, 508);
 		frame.getContentPane().add(txtrDfghj);
 		
 		JButton btnAddToCart = new JButton("Add to Cart");
 		btnAddToCart.setBackground(Color.ORANGE);
 		btnAddToCart.setBorderPainted(false);
 		btnAddToCart.setOpaque(true);
-		btnAddToCart.setBounds(55, 560, 182, 29);
+		btnAddToCart.setBounds(55, 585, 433, 29);
 		frame.getContentPane().add(btnAddToCart);
 		
 		
