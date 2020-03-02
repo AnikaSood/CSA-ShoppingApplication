@@ -56,7 +56,7 @@ public class StartingScreenUI extends JFrame {
 		frame.setBackground(Color.WHITE);
 		frame.getContentPane().setBackground(Color.WHITE);
 		
-		frame.setBounds(0, 0, 1370, 775);
+		frame.setBounds(0, 0, 1223, 712);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		frame.getContentPane().setLayout(null);
@@ -75,7 +75,7 @@ public class StartingScreenUI extends JFrame {
 		btnCart.setOpaque(true);
 		btnCart.setBorderPainted(false);
 		btnCart.setBackground(Color.WHITE);
-		btnCart.setBounds(1309, 6, 39, 39);
+		btnCart.setBounds(1156, 6, 39, 39);
 		frame.getContentPane().add(btnCart);
 		btnCart.setIcon(new ImageIcon(cart));
 		
@@ -87,14 +87,14 @@ public class StartingScreenUI extends JFrame {
 		btnSearch.setBorderPainted(false);
 		btnSearch.setBackground(Color.ORANGE);
 		btnSearch.setOpaque(true);
-		btnSearch.setBounds(1185, 6, 99, 39);
+		btnSearch.setBounds(1045, 6, 99, 39);
 		frame.getContentPane().add(btnSearch);
 		
 		JTextArea txtrSearchBar = new JTextArea();
 		txtrSearchBar.setDragEnabled(false);
 		txtrSearchBar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		txtrSearchBar.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		txtrSearchBar.setBounds(308, 17, 778, 16);
+		txtrSearchBar.setBounds(266, 16, 756, 16);
 		frame.getContentPane().add(txtrSearchBar);
 	
 		
@@ -102,7 +102,7 @@ public class StartingScreenUI extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(211, 211, 211));
 		
-		panel.setBounds(147, 6, 144, 39);
+		panel.setBounds(110, 6, 144, 39);
 		frame.getContentPane().add(panel);
 		
 		JButton btnCategories = new JButton("   Categories    ");
@@ -143,7 +143,7 @@ public class StartingScreenUI extends JFrame {
 		
 		JLabel label = new JLabel("            ");
 		label.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(169, 169, 169)));
-		label.setBounds(259, 6, 952, 39);
+		label.setBounds(168, 6, 881, 39);
 		frame.getContentPane().add(label);
 		label.setBackground(Color.WHITE);
 		label.setOpaque(true);
@@ -155,7 +155,7 @@ public class StartingScreenUI extends JFrame {
 		homeButton.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		homeButton.setBorderPainted(false);
 		homeButton.setBackground(Color.WHITE);
-		homeButton.setBounds(28, 6, 82, 39);
+		homeButton.setBounds(16, 6, 82, 39);
 		frame.getContentPane().add(homeButton);
 		
 		homeButton.setIcon(new ImageIcon(image));
@@ -163,60 +163,64 @@ public class StartingScreenUI extends JFrame {
 		JLabel label_1 = new JLabel("            ");
 		label_1.setOpaque(true);
 		label_1.setBackground(new Color(255, 255, 255));
-		label_1.setBounds(0, 0, 1370, 50);
+		label_1.setBounds(0, 0, 1247, 50);
 		frame.getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("");
 		label_2.setOpaque(true);
-		label_2.setBounds(0, 53, 1370, 7);
+		label_2.setBounds(0, 53, 1212, 8);
 		frame.getContentPane().add(label_2);
 		
 		JLabel topLabel = new JLabel("Today's Top Picks");
 		topLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 26));
-		topLabel.setBounds(55, 84, 253, 39);
+		topLabel.setBounds(10, 68, 253, 39);
 		frame.getContentPane().add(topLabel);
 		
 		JLabel p1IMAGE = new JLabel("");
 		p1IMAGE.setOpaque(true);
 		p1IMAGE.setBackground(Color.WHITE);
-		p1IMAGE.setBounds(55, 135, 334, 238);
+		p1IMAGE.setBounds(16, 119, 334, 238);
 		frame.getContentPane().add(p1IMAGE);
 		
 		JLabel p2IMAGE = new JLabel("");
 		p2IMAGE.setOpaque(true);
 		p2IMAGE.setBackground(Color.LIGHT_GRAY);
-		p2IMAGE.setBounds(518, 135, 334, 238);
+		p2IMAGE.setBounds(432, 119, 334, 238);
 		frame.getContentPane().add(p2IMAGE);
 		
 		JLabel p3IMAGE = new JLabel("");
 		p3IMAGE.setOpaque(true);
 		p3IMAGE.setBackground(Color.LIGHT_GRAY);
-		p3IMAGE.setBounds(966, 135, 334, 238);
+		p3IMAGE.setBounds(846, 119, 334, 238);
 		frame.getContentPane().add(p3IMAGE);
 		
 		JLabel p4IMAGE = new JLabel("");
 		p4IMAGE.setOpaque(true);
 		p4IMAGE.setBackground(Color.LIGHT_GRAY);
-		p4IMAGE.setBounds(55, 442, 334, 238);
+		p4IMAGE.setBounds(16, 442, 334, 238);
 		frame.getContentPane().add(p4IMAGE);
 		
 		JLabel p5IMAGE = new JLabel("");
 		p5IMAGE.setOpaque(true);
 		p5IMAGE.setBackground(Color.LIGHT_GRAY);
-		p5IMAGE.setBounds(518, 442, 334, 238);
+		p5IMAGE.setBounds(432, 442, 334, 238);
 		frame.getContentPane().add(p5IMAGE);
 		
 		JButton p1NAMEbtn = new JButton("Product Name");
+		p1NAMEbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		p1NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p1NAMEbtn.setHorizontalTextPosition(SwingConstants.LEFT);
 		p1NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
 		p1NAMEbtn.setVerticalAlignment(SwingConstants.BOTTOM);
 		p1NAMEbtn.setBorderPainted(false);
-		p1NAMEbtn.setBounds(38, 377, 207, 29);
+		p1NAMEbtn.setBounds(6, 363, 334, 29);
 		frame.getContentPane().add(p1NAMEbtn);
 		
 		JLabel p1PRICElbl = new JLabel("$");
-		p1PRICElbl.setBounds(62, 404, 65, 16);
+		p1PRICElbl.setBounds(32, 390, 65, 16);
 		frame.getContentPane().add(p1PRICElbl);
 		
 		JButton p2NAMEbtn = new JButton("Product Name");
@@ -225,11 +229,11 @@ public class StartingScreenUI extends JFrame {
 		p2NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
 		p2NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p2NAMEbtn.setBorderPainted(false);
-		p2NAMEbtn.setBounds(497, 377, 207, 29);
+		p2NAMEbtn.setBounds(415, 363, 371, 29);
 		frame.getContentPane().add(p2NAMEbtn);
 		
 		JLabel p2PRICElbl = new JLabel("$");
-		p2PRICElbl.setBounds(518, 404, 65, 16);
+		p2PRICElbl.setBounds(432, 390, 65, 16);
 		frame.getContentPane().add(p2PRICElbl);
 		
 		JButton p3NAMEbtn = new JButton("Product Name");
@@ -238,11 +242,11 @@ public class StartingScreenUI extends JFrame {
 		p3NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
 		p3NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p3NAMEbtn.setBorderPainted(false);
-		p3NAMEbtn.setBounds(944, 377, 207, 29);
+		p3NAMEbtn.setBounds(823, 363, 400, 29);
 		frame.getContentPane().add(p3NAMEbtn);
 		
 		JLabel p3PRICElbl = new JLabel("$");
-		p3PRICElbl.setBounds(966, 404, 65, 16);
+		p3PRICElbl.setBounds(846, 390, 65, 16);
 		frame.getContentPane().add(p3PRICElbl);
 		
 		JButton p4NAMEbtn = new JButton("Product Name");
@@ -251,11 +255,11 @@ public class StartingScreenUI extends JFrame {
 		p4NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
 		p4NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p4NAMEbtn.setBorderPainted(false);
-		p4NAMEbtn.setBounds(32, 682, 213, 29);
+		p4NAMEbtn.setBounds(0, 684, 213, 29);
 		frame.getContentPane().add(p4NAMEbtn);
 		
 		JLabel p4PRICElbl = new JLabel("$");
-		p4PRICElbl.setBounds(55, 709, 65, 16);
+		p4PRICElbl.setBounds(16, 709, 65, 16);
 		frame.getContentPane().add(p4PRICElbl);
 		
 		JButton p5NAMEbtn = new JButton("Product Name");
@@ -264,17 +268,17 @@ public class StartingScreenUI extends JFrame {
 		p5NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
 		p5NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p5NAMEbtn.setBorderPainted(false);
-		p5NAMEbtn.setBounds(497, 684, 213, 29);
+		p5NAMEbtn.setBounds(414, 684, 213, 29);
 		frame.getContentPane().add(p5NAMEbtn);
 		
 		JLabel p5PRICElbl = new JLabel("$");
-		p5PRICElbl.setBounds(518, 709, 65, 16);
+		p5PRICElbl.setBounds(432, 709, 65, 16);
 		frame.getContentPane().add(p5PRICElbl);
 		
 		JLabel p6IMAGE = new JLabel("");
 		p6IMAGE.setOpaque(true);
 		p6IMAGE.setBackground(Color.LIGHT_GRAY);
-		p6IMAGE.setBounds(966, 442, 334, 238);
+		p6IMAGE.setBounds(846, 442, 334, 238);
 		frame.getContentPane().add(p6IMAGE);
 		
 		JButton p6NAMEbtn = new JButton("Product Name");
@@ -283,19 +287,12 @@ public class StartingScreenUI extends JFrame {
 		p6NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
 		p6NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p6NAMEbtn.setBorderPainted(false);
-		p6NAMEbtn.setBounds(944, 684, 213, 29);
+		p6NAMEbtn.setBounds(823, 684, 213, 29);
 		frame.getContentPane().add(p6NAMEbtn);
 		
 		JLabel p6PRICElbl = new JLabel("$");
-		p6PRICElbl.setBounds(966, 709, 65, 16);
+		p6PRICElbl.setBounds(846, 709, 65, 16);
 		frame.getContentPane().add(p6PRICElbl);
-		
-		JButton btnSeeMoreResults = new JButton("See More Results");
-		btnSeeMoreResults.setBackground(Color.ORANGE);
-		btnSeeMoreResults.setOpaque(true);
-		btnSeeMoreResults.setBorderPainted(false);
-		btnSeeMoreResults.setBounds(1202, 718, 162, 29);
-		frame.getContentPane().add(btnSeeMoreResults);
 		
 		
 		//CATEGORIES HOVER
