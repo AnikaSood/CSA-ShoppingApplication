@@ -410,6 +410,8 @@ public class StartingScreenUI extends JFrame {
 /**********WHEN THE SEARCH BUTTON IS CLICKED*************/
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+			
 
 				topLabel.setText("Results:");
 				
@@ -421,30 +423,25 @@ public class StartingScreenUI extends JFrame {
 				JButton[] resultNAME = {p1NAMEbtn, p2NAMEbtn, p3NAMEbtn, p4NAMEbtn, p5NAMEbtn, p6NAMEbtn};
 				JLabel[] resultPRICE = {p1PRICElbl, p2PRICElbl, p3PRICElbl, p4PRICElbl, p5PRICElbl, p6PRICElbl};
 				
-				
+				for(int i =0; i<6; i++) {
+					
+					resultIMGS[i].setVisible(false);//(Color.WHITE); //set image
+					resultNAME[i].setText(""); //set product name
+					resultPRICE[i].setText("");					
+				}
+			
 				int i = 0;
 				int numOfResults = result.size();
 				
 				for (i = 0; i<numOfResults; i++)
 				{
+					resultIMGS[i].setVisible(true);
 					java.awt.Image toSet = new ImageIcon(result.get(i).getImage()).getImage();
 					resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
 					resultNAME[i].setText(result.get(i).getName()); //set product name
 					resultPRICE[i].setText(""+result.get(i).getPrice()+"");
 				}	
-				if (numOfResults<6)
-				{
-					int rem = (6-numOfResults)-1;
-					
-					for (i=5; i<=rem; i--)
-					{
-						
-						resultIMGS[i].setBackground(Color.WHITE); //set image
-						resultNAME[i].setText(""); //set product name
-						resultPRICE[i].setText("");
-					}
-					
-				}
+			
 				
 				
 				
