@@ -411,6 +411,8 @@ public class StartingScreenUI extends JFrame {
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
+				topLabel.setText("Results:");
+				
 				String searchInput = txtrSearchBar.getText();
 				SearchControl results = new SearchControl();
 				List<Product> result = results.searchReturn(searchInput);
@@ -418,9 +420,12 @@ public class StartingScreenUI extends JFrame {
 				JLabel[] resultIMGS = {p1IMAGE, p2IMAGE, p3IMAGE, p4IMAGE, p5IMAGE, p6IMAGE};
 				JButton[] resultNAME = {p1NAMEbtn, p2NAMEbtn, p3NAMEbtn, p4NAMEbtn, p5NAMEbtn, p6NAMEbtn};
 				JLabel[] resultPRICE = {p1PRICElbl, p2PRICElbl, p3PRICElbl, p4PRICElbl, p5PRICElbl, p6PRICElbl};
-
+				
+				
+				int i = 0;
 				int numOfResults = result.size();
-				for (int i = 0; i<numOfResults; i++)
+				
+				for (i = 0; i<numOfResults; i++)
 				{
 					java.awt.Image toSet = new ImageIcon(result.get(i).getImage()).getImage();
 					resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
@@ -430,7 +435,13 @@ public class StartingScreenUI extends JFrame {
 				
 				int rem = (6-numOfResults)-1;
 				
-				//for (i=5; i<=rem; i++)
+				for (i=5; i<=rem; i--)
+				{
+					
+					resultIMGS[i].setBackground(Color.WHITE); //set image
+					resultNAME[i].setText(""); //set product name
+					resultPRICE[i].setText("");
+				}
 				
 				
 			}
