@@ -31,10 +31,10 @@ public class Storage {
 		shoe3 = new Shoes("Air Force 1", 90.00, "Black", "Nike", "Sneakers");
 		shoe4 = new Shoes("Christian Louboutins", 1195.01, "Gold", "Christian Louboutins", "Pumps");
 		
-		/*supply1 = new SchoolSupplies(); 
-		supply2 = new SchoolSupplies(); 
-		supply3 = new SchoolSupplies(); 
-		supply4 = new SchoolSupplies(); */
+		supply1 = new SchoolSupplies("Binder", 5.99, "Staples", "Green", "3-ring"); 
+		supply2 = new SchoolSupplies("10 Ream Copy Paper", 43.99, "HP", "Plain White", "8.5x11"); 
+		supply3 = new SchoolSupplies("Notebook", 2.99, "Office Depot", "Navy Blue", "College-Ruled"); 
+		supply4 = new SchoolSupplies("Stapler", 12.00, "Target", "Black", "Mini");
 		
 		products.add(movie1);
 		products.add(movie2);
