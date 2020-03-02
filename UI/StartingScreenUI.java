@@ -178,7 +178,7 @@ public class StartingScreenUI extends JFrame {
 		
 		JLabel p1IMAGE = new JLabel("");
 		p1IMAGE.setOpaque(true);
-		p1IMAGE.setBackground(Color.WHITE);
+		p1IMAGE.setBackground(Color.LIGHT_GRAY);
 		p1IMAGE.setBounds(16, 103, 334, 238);
 		frame.getContentPane().add(p1IMAGE);
 		
@@ -413,6 +413,7 @@ public class StartingScreenUI extends JFrame {
 /**********WHEN THE SEARCH BUTTON IS CLICKED*************/
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				btnSearch.setBackground(Color.WHITE);
 				String searchInput = txtrSearchBar.getText();
 				SearchControl results = new SearchControl();
 				List<Product> result = results.searchReturn(searchInput);
@@ -428,9 +429,7 @@ public class StartingScreenUI extends JFrame {
 					resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
 					resultNAME[i].setText(result.get(i).getName()); //set product name
 					resultPRICE[i].setText(""+result.get(i).getPrice()+"");
-				}
-				
-				
+				}	
 				
 			}
 		});
