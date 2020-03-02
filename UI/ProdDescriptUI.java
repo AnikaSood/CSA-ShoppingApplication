@@ -54,7 +54,7 @@ public class ProdDescriptUI extends JFrame {
 		frame.setBackground(Color.WHITE);
 		frame.getContentPane().setBackground(Color.WHITE);
 		
-		frame.setBounds(0, 0, 1370, 775);
+		frame.setBounds(0, 0, 1223, 710);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		frame.getContentPane().setLayout(null);
@@ -74,7 +74,7 @@ public class ProdDescriptUI extends JFrame {
 		btnCart.setOpaque(true);
 		btnCart.setBorderPainted(false);
 		btnCart.setBackground(Color.WHITE);
-		btnCart.setBounds(1309, 6, 39, 39);
+		btnCart.setBounds(1156, 6, 39, 39);
 		frame.getContentPane().add(btnCart);
 		btnCart.setIcon(new ImageIcon(cart));
 		
@@ -82,14 +82,14 @@ public class ProdDescriptUI extends JFrame {
 		btnSearch.setBorderPainted(false);
 		btnSearch.setBackground(Color.ORANGE);
 		btnSearch.setOpaque(true);
-		btnSearch.setBounds(1185, 6, 99, 39);
+		btnSearch.setBounds(1045, 6, 99, 39);
 		frame.getContentPane().add(btnSearch);
 		
 		JTextArea txtrSearchBar = new JTextArea();
 		txtrSearchBar.setDragEnabled(false);
 		txtrSearchBar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		txtrSearchBar.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		txtrSearchBar.setBounds(308, 17, 778, 16);
+		txtrSearchBar.setBounds(266, 16, 756, 16);
 		frame.getContentPane().add(txtrSearchBar);
 	
 		
@@ -97,7 +97,7 @@ public class ProdDescriptUI extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(211, 211, 211));
 		
-		panel.setBounds(147, 6, 144, 39);
+		panel.setBounds(110, 6, 144, 39);
 		frame.getContentPane().add(panel);
 		
 		JButton btnCategories = new JButton("   Categories    ");
