@@ -38,6 +38,7 @@ public class StartingScreenUI extends JFrame {
 				{
 					StartingScreenUI window = new StartingScreenUI();
 					window.frame.setVisible(true);
+					window.getContentPane();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -372,22 +373,22 @@ public class StartingScreenUI extends JFrame {
 /********Setting the top picks*************/		
 //Set Images
 		java.awt.Image imgP1 = new ImageIcon("ui/binder.jpg").getImage();
-		p1IMAGE.setIcon(new ImageIcon(image));
+		p1IMAGE.setIcon(new ImageIcon(imgP1));
 		
 		java.awt.Image imgP2 = new ImageIcon("ui/binder.jpg").getImage();
-		p2IMAGE.setIcon(new ImageIcon(image));
+		p2IMAGE.setIcon(new ImageIcon(imgP2));
 		
 		java.awt.Image imgP3 = new ImageIcon("ui/binder.jpg").getImage();
-		p3IMAGE.setIcon(new ImageIcon(image));
+		p3IMAGE.setIcon(new ImageIcon(imgP3));
 		
 		java.awt.Image imgP4 = new ImageIcon("ui/binder.jpg").getImage();
-		p4IMAGE.setIcon(new ImageIcon(image));
+		p4IMAGE.setIcon(new ImageIcon(imgP4));
 		
 		java.awt.Image imgP5 = new ImageIcon("ui/binder.jpg").getImage();
-		p5IMAGE.setIcon(new ImageIcon(image));
+		p5IMAGE.setIcon(new ImageIcon(imgP5));
 		
 		java.awt.Image imgP6 = new ImageIcon("ui/binder.jpg").getImage();
-		p6IMAGE.setIcon(new ImageIcon(image));
+		p6IMAGE.setIcon(new ImageIcon(imgP6));
 //Set Product Name
 //Set Price
 		
