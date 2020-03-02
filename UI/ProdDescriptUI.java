@@ -20,6 +20,7 @@ import javax.swing.UIManager;
 import javax.swing.border.MatteBorder;
 
 import code.Product;
+import code.SearchControl;
 import code.Storage;
 
 public class ProdDescriptUI extends JFrame {
@@ -273,18 +274,19 @@ public class ProdDescriptUI extends JFrame {
 		
 		
 /****************************************************************************************************/
-		Storage x = new Storage();
-		List<Product> allProds = x.getProds();
+	
 		
+		SearchControl search = new SearchControl();
+		List<Product> prod = search.searchReturn(passedProdName);
 		
 		name.setText(passedProdName);
 		
-		java.awt.Image prodIMG = new ImageIcon(allProds.get(allProds.indexOf(passedProdName)).getImage()).getImage();
+		java.awt.Image prodIMG = new ImageIcon(prod.get(0).getImage()).getImage();
 		prodImage.setIcon(new ImageIcon(prodIMG));
 		
-		prodDescript.setText(allProds.get(allProds.indexOf(passedProdName)).makeDescription());
+		prodDescript.setText(prod.get(0).makeDescription());
 		
-		price.setText("$ "+allProds.get(allProds.indexOf(passedProdName)).getPrice()+"");
+		price.setText("$ "+prod.get(0).getPrice()+"");
 		
 		
 	}
