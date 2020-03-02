@@ -32,6 +32,20 @@ public class ProdDescriptUI extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
+	
+	public static void openFrame() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ProdDescriptUI window = new ProdDescriptUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
 
 	
 	public ProdDescriptUI() {

@@ -456,6 +456,8 @@ public class StartingScreenUI extends JFrame {
 		
 		p1NAMEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				ProdDescriptUI frame = new ProdDescriptUI(); 
+				ProdDescriptUI.openFrame(); 
 			}
 		});
 		
