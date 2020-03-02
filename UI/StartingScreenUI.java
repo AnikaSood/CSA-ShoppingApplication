@@ -430,7 +430,7 @@ public class StartingScreenUI extends JFrame {
 					java.awt.Image toSet = new ImageIcon(result.get(i).getImage()).getImage();
 					resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
 					resultNAME[i].setText(result.get(i).getName()); //set product name
-					resultPRICE[i].setText(""+result.get(i).getPrice()+"");
+					resultPRICE[i].setText("$ "+result.get(i).getPrice()+"");
 				}	
 				if (numOfResults<6)
 				{
@@ -456,12 +456,40 @@ public class StartingScreenUI extends JFrame {
 		
 		p1NAMEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				ProdDescriptUI frame = new ProdDescriptUI(); 
+				ProdDescriptUI frame = new ProdDescriptUI(p1NAMEbtn.getText()); //passes the name of the button clicked to the constructor of the prod class
 				ProdDescriptUI.openFrame(); 
 			}
 		});
-		
-		
+		p2NAMEbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ProdDescriptUI frame = new ProdDescriptUI(p2NAMEbtn.getText()); 
+				ProdDescriptUI.openFrame(); 
+			}
+		});
+		p3NAMEbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ProdDescriptUI frame = new ProdDescriptUI(p3NAMEbtn.getText()); 
+				ProdDescriptUI.openFrame(); 
+			}
+		});
+		p4NAMEbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ProdDescriptUI frame = new ProdDescriptUI(p4NAMEbtn.getText()); 
+				ProdDescriptUI.openFrame(); 
+			}
+		});
+		p5NAMEbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ProdDescriptUI frame = new ProdDescriptUI(p5NAMEbtn.getText()); 
+				ProdDescriptUI.openFrame(); 
+			}
+		});
+		p6NAMEbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ProdDescriptUI frame = new ProdDescriptUI(p6NAMEbtn.getText()); 
+				ProdDescriptUI.openFrame(); 
+			}
+		});
 	}
 }
 
