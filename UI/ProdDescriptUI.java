@@ -138,7 +138,7 @@ public class ProdDescriptUI extends JFrame {
 		
 		JLabel label = new JLabel("            ");
 		label.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(169, 169, 169)));
-		label.setBounds(259, 6, 952, 39);
+		label.setBounds(168, 6, 881, 39);
 		frame.getContentPane().add(label);
 		label.setBackground(Color.WHITE);
 		label.setOpaque(true);
@@ -150,7 +150,7 @@ public class ProdDescriptUI extends JFrame {
 		homeButton.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		homeButton.setBorderPainted(false);
 		homeButton.setBackground(Color.WHITE);
-		homeButton.setBounds(28, 6, 82, 39);
+		homeButton.setBounds(16, 6, 82, 39);
 		frame.getContentPane().add(homeButton);
 		
 		homeButton.setIcon(new ImageIcon(image));
@@ -168,28 +168,28 @@ public class ProdDescriptUI extends JFrame {
 		
 		JLabel label_3 = new JLabel("");
 		label_3.setOpaque(true);
-		label_3.setBounds(55, 107, 433, 357);
+		label_3.setBounds(16, 83, 433, 357);
 		frame.getContentPane().add(label_3);
 		
 		JLabel lblProductName = new JLabel("Product Name");
 		lblProductName.setFont(new Font("Lucida Grande", Font.PLAIN, 37));
-		lblProductName.setBounds(55, 476, 297, 39);
+		lblProductName.setBounds(16, 452, 297, 39);
 		frame.getContentPane().add(lblProductName);
 		
 		JLabel label_4 = new JLabel("$");
 		label_4.setFont(new Font("Lucida Grande", Font.PLAIN, 27));
-		label_4.setBounds(55, 509, 224, 39);
+		label_4.setBounds(16, 503, 224, 39);
 		frame.getContentPane().add(label_4);
 		
 		JLabel lblDescription = new JLabel("Description:");
 		lblDescription.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblDescription.setBounds(537, 107, 297, 39);
+		lblDescription.setBounds(459, 83, 297, 39);
 		frame.getContentPane().add(lblDescription);
 		
 		JTextArea txtrDfghj = new JTextArea();
 		txtrDfghj.setBackground(UIManager.getColor("Button.background"));
 		txtrDfghj.setText("The Description Goes Here");
-		txtrDfghj.setBounds(537, 158, 778, 508);
+		txtrDfghj.setBounds(461, 120, 734, 508);
 		frame.getContentPane().add(txtrDfghj);
 		
 		JButton btnAddToCart = new JButton("Add to Cart");
@@ -203,7 +203,7 @@ public class ProdDescriptUI extends JFrame {
 		btnAddToCart.setBackground(Color.ORANGE);
 		btnAddToCart.setBorderPainted(false);
 		btnAddToCart.setOpaque(true);
-		btnAddToCart.setBounds(55, 585, 433, 29);
+		btnAddToCart.setBounds(16, 582, 433, 29);
 		frame.getContentPane().add(btnAddToCart);
 		
 		
