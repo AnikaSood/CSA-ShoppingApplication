@@ -1,5 +1,6 @@
 package UI;
-
+import code.*;
+import java.util.List;
 import java.awt.Color;
 import java.awt.EventQueue;
 
@@ -370,30 +371,48 @@ public class StartingScreenUI extends JFrame {
 				
 			}
 		});
-/********Setting the top picks*************/		
-//Set Images
-		java.awt.Image imgP1 = new ImageIcon("ui/binder.jpg").getImage();
+/********Setting the top picks*************/	
+		
+		Storage stor = new Storage();
+		List<Product> allProds = stor.getProds();
+		
+		
+		
+		//Set Images
+		java.awt.Image imgP1 = new ImageIcon(allProds.get(0).getImage()).getImage();
 		p1IMAGE.setIcon(new ImageIcon(imgP1));
 		
-		java.awt.Image imgP2 = new ImageIcon("ui/binder.jpg").getImage();
+		java.awt.Image imgP2 = new ImageIcon(allProds.get(1).getImage()).getImage();
 		p2IMAGE.setIcon(new ImageIcon(imgP2));
 		
-		java.awt.Image imgP3 = new ImageIcon("ui/binder.jpg").getImage();
+		java.awt.Image imgP3 = new ImageIcon(allProds.get(2).getImage()).getImage();
 		p3IMAGE.setIcon(new ImageIcon(imgP3));
 		
-		java.awt.Image imgP4 = new ImageIcon("ui/binder.jpg").getImage();
+		java.awt.Image imgP4 = new ImageIcon(allProds.get(3).getImage()).getImage();
 		p4IMAGE.setIcon(new ImageIcon(imgP4));
 		
-		java.awt.Image imgP5 = new ImageIcon("ui/binder.jpg").getImage();
+		java.awt.Image imgP5 = new ImageIcon(allProds.get(4).getImage()).getImage();
 		p5IMAGE.setIcon(new ImageIcon(imgP5));
 		
-		java.awt.Image imgP6 = new ImageIcon("ui/binder.jpg").getImage();
+		java.awt.Image imgP6 = new ImageIcon(allProds.get(5).getImage()).getImage();
 		p6IMAGE.setIcon(new ImageIcon(imgP6));
-//Set Product Name
-//Set Price
+		//Set Product Name
+		p1NAMEbtn.setText(allProds.get(0).getName());
+		p2NAMEbtn.setText(allProds.get(1).getName());
+		p3NAMEbtn.setText(allProds.get(2).getName());
+		p4NAMEbtn.setText(allProds.get(3).getName());
+		p5NAMEbtn.setText(allProds.get(4).getName());
+		p6NAMEbtn.setText(allProds.get(5).getName());
 		
+		//Set Price
 		
-		
+		p1PRICElbl.setText(""+allProds.get(0).getPrice());
+		p2PRICElbl.setText(""+allProds.get(1).getPrice());
+		p3PRICElbl.setText(""+allProds.get(2).getPrice());
+		p4PRICElbl.setText(""+allProds.get(3).getPrice());
+		p5PRICElbl.setText(""+allProds.get(4).getPrice());
+		p6PRICElbl.setText(""+allProds.get(5).getPrice());
+
 /**********WHEN THE SEARCH BUTTON IS CLICKED*************/
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
