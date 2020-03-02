@@ -16,7 +16,7 @@ public class Storage {
 	
 	public Storage()
 	{
-		movie1 = new Movies("Movies", "Drama/Thriller", "A Quiet Place", 8.99, 7.5, "PG-13", "1 h 31 m", "2018");
+		movie1 = new Movies("Movies", "Drama/Thriller", "A Quiet Place", 8.99, 7.5, "PG-13", "1 h 31 m", "2018", "ui/quietplace.jpg");
 		movie2 = new Movies("Movies", "Narrative/Fantasy", "Harry Potter: Sorcerer's Stone", 7.99, 7.6, "PG", "2 h 39 m", "2001");
 		movie3 = new Movies("Movies", "Fantasy", "The Little Mermaid", 6.99, 7.6, "G", "1 h 25 m", "1989");
 		movie4 = new Movies("Movies", "Teen/Comedy", "Mean Girls", 7.99, 7, "PG-13", "1 h 27 m", "2004");

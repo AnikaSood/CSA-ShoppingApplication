@@ -83,6 +83,10 @@ public class StartingScreenUI extends JFrame {
 		btnCart.setIcon(new ImageIcon(cart));
 		
 		JButton btnSearch = new JButton("Search");
+		
+		StartingScreenControl ssc = new StartingScreenControl();
+
+		
 		btnSearch.setBorderPainted(false);
 		btnSearch.setBackground(Color.ORANGE);
 		btnSearch.setOpaque(true);
@@ -360,6 +364,20 @@ public class StartingScreenUI extends JFrame {
 				panel.setBounds(147, 6, 144, 39);
 			}
 		});
+		
+		
+		
+		
+		
+/**********WHEN THE SEARCH BUTTON IS CLICKED*************/
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String searchInput = txtrSearchBar.getText();
+				ssc.getImages(searchInput); //Returns list of all images needed when search is completed
+			}
+		});
+/*******************************************************/
+		
 		
 		
 	}
