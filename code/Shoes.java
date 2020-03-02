@@ -8,8 +8,8 @@ public class Shoes extends Product {
 	private String type; 
 	
 	
-	public Shoes(String myName, double myPrice, String color,String brand, String myType) {
-		super(myName, myPrice);
+	public Shoes(String myProduct, String myName, double myPrice, String color,String brand, String myType) {
+		super(myProduct, myName, myPrice);
 		//name = myName; 
 		//price = myPrice; 
 		Color = color;
@@ -47,7 +47,8 @@ public class Shoes extends Product {
 	
 	public String makeDescription() 
 	{
-		String des = getName() + "\n" + getPrice() + "\n"+ Color + "\n" + Brand; 
+		String des = getProduct() + "\n" + getName() + "\n" + getPrice() + 
+				"\n"+ getColor() + "\n" + getBrand() + "\n" + getType(); 
 		return des; 
 	}
 	

@@ -99,7 +99,7 @@ List<Product> all = store.getProds();
 		
 
 
-		List<Product> results = search.searchReturn("green"); 
+		List<Product> results = search.searchReturn("book"); 
 		
 		
 		for(int i = 0; i<results.size(); i ++)

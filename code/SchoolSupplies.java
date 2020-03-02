@@ -6,8 +6,8 @@ public class SchoolSupplies extends Product{
 	private String color; 
 	private String type; 
 
-	public SchoolSupplies(String myName, double myPrice, String myBrand, String myColor, String myType) {
-		super(myName, myPrice);
+	public SchoolSupplies(String myProduct, String myName, double myPrice, String myBrand, String myColor, String myType) {
+		super(myProduct, myName, myPrice);
 		brand = myBrand; 
 		color = myColor; 
 		type = myType; 
@@ -38,7 +38,7 @@ public class SchoolSupplies extends Product{
 	
 	public String makeDescription()
 	{
-		String des = getPrice() + "\n" + brand + "\n" + color + "\n" + type; 
+		String des = getProduct() + "\n" + getName() + getPrice() + "\n" + getBrand() + "\n" + getColor() + "\n" + getType(); 
 		return des; 
 	}
 	

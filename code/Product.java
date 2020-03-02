@@ -4,13 +4,15 @@ public abstract class Product {
 	
 	private String name;
 	private double price; 
+	private String product; 
 
 	 
 	
-	public Product(String myName, double myPrice)
+	public Product(String myProduct, String myName, double myPrice)
 	{
 		name = myName; 
 		price = myPrice; 
+		product = myProduct; 
 	}
 	
 	public abstract String toString();
@@ -31,6 +33,11 @@ public abstract class Product {
 	public double getPrice()
 	{
 		return price; 
+	}
+	
+	public String getProduct()
+	{
+		return product; 
 	}
 
 }

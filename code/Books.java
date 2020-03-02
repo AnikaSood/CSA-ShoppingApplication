@@ -10,9 +10,9 @@ public class Books extends Product {
 	private String author; 
 
 	
-	public Books(String myName, String myAuthor, double myPrice, String myGenre, String myCondition, String myType, int myPages, String myDate)
+	public Books(String myProduct, String myName, String myAuthor, double myPrice, String myGenre, String myCondition, String myType, int myPages, String myDate)
 	{
-		super(myName, myPrice);
+		super(myProduct, myName, myPrice);
 		author = myAuthor; 
 		genre = myGenre; 
 		condition = myCondition; 
@@ -103,13 +103,14 @@ public class Books extends Product {
 	
 	public String makeDescription()
 	{
-		String description = getName() + "\n" + priceAdjust(condition, type) + "\n" + genre + "\n" + pages;
+		String description = getProduct() + "\n" + getName() + "\n" + author + "\n" + priceAdjust(condition, type) + "\n" 
+	+ genre + "\n" + pages + "\n" + condition + "\n" + type + "\n" + release;
 		return description; 
 	}
 	
 	public static void main(String[] args)
 	{
-		Books book = new Books("Hunger Games", "Suzanne Collins", 21.50, "Dystopian", "used, poor", "kindle", 430, "Sept 2020");
+		Books book = new Books("Books", "Hunger Games", "Suzanne Collins", 21.50, "Dystopian", "used, poor", "kindle", 430, "Sept 2020");
 		String des = book.makeDescription();
 		System.out.print(des);
 	}
