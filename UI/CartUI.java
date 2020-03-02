@@ -24,7 +24,7 @@ import java.awt.event.ActionEvent;
 public class CartUI extends JFrame {
 
 	/**
-	 * 
+	 * 1223, 712
 	 */
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;

@@ -1,8 +1,9 @@
 package UI;
-
+import java.util.ArrayList;
+import java.util.List; 
 import java.awt.Color;
 import java.awt.EventQueue;
-
+import code.*;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -23,6 +24,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.UIManager;
 
 public class ProdDescriptUI extends JFrame {
+	
+	List<Product> buying = new ArrayList<Product>(); 
 
 	/**
 	 * 
@@ -176,6 +179,13 @@ public class ProdDescriptUI extends JFrame {
 		frame.getContentPane().add(txtrDfghj);
 		
 		JButton btnAddToCart = new JButton("Add to Cart");
+		btnAddToCart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				
+			}
+		});
 		btnAddToCart.setBackground(Color.ORANGE);
 		btnAddToCart.setBorderPainted(false);
 		btnAddToCart.setOpaque(true);

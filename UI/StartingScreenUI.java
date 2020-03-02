@@ -414,7 +414,9 @@ public class StartingScreenUI extends JFrame {
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String searchInput = txtrSearchBar.getText();
-			//	ssc.getImages(searchInput); //Returns list of all images needed when search is completed
+				SearchControl results = new SearchControl();
+				List<Product> result = results.searchReturn(searchInput);
+				//	ssc.getImages(searchInput); //Returns list of all images needed when search is completed
 			}
 		});
 /*******************************************************/
