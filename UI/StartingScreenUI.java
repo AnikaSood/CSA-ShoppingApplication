@@ -207,10 +207,7 @@ public class StartingScreenUI extends JFrame {
 		frame.getContentPane().add(p5IMAGE);
 		
 		JButton p1NAMEbtn = new JButton("Product Name");
-		p1NAMEbtn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
+		
 		p1NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p1NAMEbtn.setHorizontalTextPosition(SwingConstants.LEFT);
 		p1NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
@@ -413,7 +410,7 @@ public class StartingScreenUI extends JFrame {
 /**********WHEN THE SEARCH BUTTON IS CLICKED*************/
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				btnSearch.setBackground(Color.WHITE);
+
 				String searchInput = txtrSearchBar.getText();
 				SearchControl results = new SearchControl();
 				List<Product> result = results.searchReturn(searchInput);
@@ -431,10 +428,19 @@ public class StartingScreenUI extends JFrame {
 					resultPRICE[i].setText(""+result.get(i).getPrice()+"");
 				}	
 				
+				int rem = (6-numOfResults)-1;
+				
+				//for (i=5; i<=rem; i++)
+				
+				
 			}
 		});
-/*******************************************************/
+/******************ACTION PERFORMED FOR PRODUCTS, OPEN DESCRIPT************************************/
 		
+		p1NAMEbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
 		
 		
 	}
