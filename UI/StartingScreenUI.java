@@ -174,14 +174,14 @@ public class StartingScreenUI extends JFrame {
 		label_2.setBounds(0, 53, 1370, 7);
 		frame.getContentPane().add(label_2);
 		
-		JLabel lblTodaysTopPicks = new JLabel("Today's Top Picks");
-		lblTodaysTopPicks.setFont(new Font("Lucida Grande", Font.PLAIN, 26));
-		lblTodaysTopPicks.setBounds(55, 84, 253, 39);
-		frame.getContentPane().add(lblTodaysTopPicks);
+		JLabel topLabel = new JLabel("Today's Top Picks");
+		topLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 26));
+		topLabel.setBounds(55, 84, 253, 39);
+		frame.getContentPane().add(topLabel);
 		
 		JLabel p1IMAGE = new JLabel("");
 		p1IMAGE.setOpaque(true);
-		p1IMAGE.setBackground(Color.LIGHT_GRAY);
+		p1IMAGE.setBackground(Color.WHITE);
 		p1IMAGE.setBounds(55, 135, 334, 238);
 		frame.getContentPane().add(p1IMAGE);
 		
@@ -364,8 +364,12 @@ public class StartingScreenUI extends JFrame {
 				panel.setBounds(147, 6, 144, 39);
 			}
 		});
-		
-		
+/********Setting the top picks*************/		
+//Set Images
+		java.awt.Image imgP1 = new ImageIcon("ui/binder.jpg").getImage();
+		p1IMAGE.setIcon(new ImageIcon(image));
+//Set Product Name
+//Set Price
 		
 		
 		
@@ -373,7 +377,7 @@ public class StartingScreenUI extends JFrame {
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String searchInput = txtrSearchBar.getText();
-				ssc.getImages(searchInput); //Returns list of all images needed when search is completed
+			//	ssc.getImages(searchInput); //Returns list of all images needed when search is completed
 			}
 		});
 /*******************************************************/

@@ -7,16 +7,17 @@ public class Movies extends Product{
 	private String MPA; 
 	private String length; 
 	private String release; 
+	private String image;
 	
-	public Movies(String myProduct, String myGenre, String myName, double myPrice, double myReview, String myRating, String myLength, String myRelease)
+	public Movies(String myProduct, String myGenre, String myName, double myPrice, double myReview, String myRating, String myLength, String myRelease, String myImage)
 	{
-		super(myProduct, myName, myPrice);
+		super(myProduct, myName, myPrice, myImage);
 		genre = myGenre; 
 		IMDb = myReview;
 		MPA = myRating; 
 		length = myLength; 
 		release = myRelease;
-		
+		image = myImage;
 	}
 
 	
@@ -58,10 +59,10 @@ public class Movies extends Product{
 		 + getDate() + "\n" + getReview();
 		return description; 
 	}
-
+	
 	public static void main(String[] args)
 	{
-		Movies prod = new Movies("Movies", "horror", "Nightmares", 11.20, 7.2,"R", "3 hr 12 min", "Sept 2020");
+		Movies prod = new Movies("Movies", "horror", "Nightmares", 11.20, 7.2,"R", "3 hr 12 min", "Sept 2020", "ui/image.jpg");
 		String description = prod.makeDescription();
 		System.out.print(description);
 	}

@@ -8,17 +8,19 @@ public class Books extends Product {
 	private int pages; 
 	private String release; 
 	private String author; 
+	private String image;
 
 	
-	public Books(String myProduct, String myName, String myAuthor, double myPrice, String myGenre, String myCondition, String myType, int myPages, String myDate)
+	public Books(String myProduct, String myName, String myAuthor, double myPrice, String myGenre, String myCondition, String myType, int myPages, String myDate, String myImage)
 	{
-		super(myProduct, myName, myPrice);
+		super(myProduct, myName, myPrice, myImage);
 		author = myAuthor; 
 		genre = myGenre; 
 		condition = myCondition; 
 		type = myType; 
 		pages = myPages; 
 		release = myDate; 
+		image = myImage;
 		getPrice();
 	}
 	
@@ -110,7 +112,7 @@ public class Books extends Product {
 	
 	public static void main(String[] args)
 	{
-		Books book = new Books("Books", "Hunger Games", "Suzanne Collins", 21.50, "Dystopian", "used, poor", "kindle", 430, "Sept 2020");
+		Books book = new Books("Books", "Hunger Games", "Suzanne Collins", 21.50, "Dystopian", "used, poor", "kindle", 430, "Sept 2020", "ui/image.jpg");
 		String des = book.makeDescription();
 		System.out.print(des);
 	}

@@ -17,24 +17,24 @@ public class Storage {
 	public Storage()
 	{
 		movie1 = new Movies("Movies", "Drama/Thriller", "A Quiet Place", 8.99, 7.5, "PG-13", "1 h 31 m", "2018", "ui/quietplace.jpg");
-		movie2 = new Movies("Movies", "Narrative/Fantasy", "Harry Potter: Sorcerer's Stone", 7.99, 7.6, "PG", "2 h 39 m", "2001");
-		movie3 = new Movies("Movies", "Fantasy", "The Little Mermaid", 6.99, 7.6, "G", "1 h 25 m", "1989");
-		movie4 = new Movies("Movies", "Teen/Comedy", "Mean Girls", 7.99, 7, "PG-13", "1 h 27 m", "2004");
+		movie2 = new Movies("Movies", "Narrative/Fantasy", "Harry Potter: Sorcerer's Stone", 7.99, 7.6, "PG", "2 h 39 m", "2001", "ui/hpstone.jpg");
+		movie3 = new Movies("Movies", "Fantasy", "The Little Mermaid", 6.99, 7.6, "G", "1 h 25 m", "1989", "ui/littlemermaid.png");
+		movie4 = new Movies("Movies", "Teen/Comedy", "Mean Girls", 7.99, 7, "PG-13", "1 h 27 m", "2004", "ui/meangirls.jpg");
 		
-		book1 = new Books("Books", "Catcher in the Rye", "J.D. Salinger", 6.99, "Coming-of-Age Fiction", "new", "paperback", 196, "May 1, 1991"); 
-		book2 = new Books("Books", "Percy Jackson: The Lightning Thief", "Rick Riordan", 6.99, "Fantasy-Adventure", "like new", "hardcover", 428, "June 28, 2005");
-		book3 = new Books("Books", "Hunger Games", "Suzanne Collins", 10.19, "Science Fiction", "used poor", "paperback", 374, "September 14 2008");
-		book4 = new Books("Books", "Flat Stanley: His Orginal Adventure", "Jeff Brown", 4.79, "Children's Literature", "new", "kindle", 89, "May 18th, 1964");
+		book1 = new Books("Books", "Catcher in the Rye", "J.D. Salinger", 6.99, "Coming-of-Age Fiction", "new", "paperback", 196, "May 1, 1991", "ui/catcherintherye.jpg"); 
+		book2 = new Books("Books", "Percy Jackson: The Lightning Thief", "Rick Riordan", 6.99, "Fantasy-Adventure", "like new", "hardcover", 428, "June 28, 2005", "ui/percyjackson.jpg");
+		book3 = new Books("Books", "Hunger Games", "Suzanne Collins", 10.19, "Science Fiction", "used poor", "paperback", 374, "September 14 2008", "ui/hungergames.jpg");
+		book4 = new Books("Books", "Flat Stanley: His Orginal Adventure", "Jeff Brown", 4.79, "Children's Literature", "new", "kindle", 89, "May 18th, 1964", "ui/flatstan.jpg");
 		
-		shoe1 = new Shoes("Shoes", "The Classic Clog", 9.99, "Puke Green", "Crocs", "Clogs"); //
-		shoe2 = new Shoes("Shoes", "Men's Slip-on Skate Shoe", 46.70, "White", "Vans", "Slip-ons");
-		shoe3 = new Shoes("Shoes", "Air Force 1", 90.00, "Black", "Nike", "Sneakers");
-		shoe4 = new Shoes("Shoes", "Christian Louboutins", 1195.01, "Gold", "Christian Louboutins", "Pumps");
+		shoe1 = new Shoes("Shoes", "The Classic Clog", 9.99, "Puke Green", "Crocs", "Clogs", "ui/crocs.jpg"); //
+		shoe2 = new Shoes("Shoes", "Men's Slip-on Skate Shoe", 46.70, "White", "Vans", "Slip-ons", "ui/vans.jpg");
+		shoe3 = new Shoes("Shoes", "Air Force 1", 90.00, "Black", "Nike", "Sneakers", "ui/black-air-force-1.jpeg");
+		shoe4 = new Shoes("Shoes", "Christian Louboutins", 1195.01, "Gold", "Christian Louboutins", "Pumps", "ui/heels.jpg");
 		
-		supply1 = new SchoolSupplies("Office Supply, School Supply", "Binder", 5.99, "Staples", "Green", "3-ring"); 
-		supply2 = new SchoolSupplies("Office Supply, School Supply", "10 Ream Copy Paper", 43.99, "HP", "Plain White", "8.5x11"); 
-		supply3 = new SchoolSupplies("Office Supply, School Supply", "Notebook", 2.99, "Office Depot", "Navy Blue", "College-Ruled"); 
-		supply4 = new SchoolSupplies("Office Supply, School Supply", "Stapler", 12.00, "Target", "Black", "Mini");
+		supply1 = new SchoolSupplies("Office Supply, School Supply", "Binder", 5.99, "Staples", "Green", "3-ring", "ui/binder.jpg"); 
+		supply2 = new SchoolSupplies("Office Supply, School Supply", "10 Ream Copy Paper", 43.99, "HP", "Plain White", "8.5x11", "ui/paper.jpg"); 
+		supply3 = new SchoolSupplies("Office Supply, School Supply", "Notebook", 2.99, "Office Depot", "Navy Blue", "College-Ruled", "ui/notebook.jpg"); 
+		supply4 = new SchoolSupplies("Office Supply, School Supply", "Stapler", 12.00, "Target", "Black", "Mini", "ui/stapler.jpg");
 		
 		products.add(movie1);
 		products.add(movie2);
