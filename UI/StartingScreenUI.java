@@ -432,16 +432,22 @@ public class StartingScreenUI extends JFrame {
 					resultNAME[i].setText(result.get(i).getName()); //set product name
 					resultPRICE[i].setText(""+result.get(i).getPrice()+"");
 				}	
-				
-				int rem = (6-numOfResults)-1;
-				
-				for (i=5; i<=rem; i--)
+				if (numOfResults<6)
 				{
+					int rem = (6-numOfResults)-1;
 					
-					resultIMGS[i].setBackground(Color.WHITE); //set image
-					resultNAME[i].setText(""); //set product name
-					resultPRICE[i].setText("");
+					for (i=5; i<=rem; i--)
+					{
+						
+						resultIMGS[i].setBackground(Color.WHITE); //set image
+						resultNAME[i].setText(""); //set product name
+						resultPRICE[i].setText("");
+					}
+					
 				}
+				
+				
+				
 				
 				
 			}
