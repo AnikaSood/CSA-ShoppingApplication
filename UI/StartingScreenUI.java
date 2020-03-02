@@ -373,6 +373,21 @@ public class StartingScreenUI extends JFrame {
 //Set Images
 		java.awt.Image imgP1 = new ImageIcon("ui/binder.jpg").getImage();
 		p1IMAGE.setIcon(new ImageIcon(image));
+		
+		java.awt.Image imgP2 = new ImageIcon("ui/binder.jpg").getImage();
+		p2IMAGE.setIcon(new ImageIcon(image));
+		
+		java.awt.Image imgP3 = new ImageIcon("ui/binder.jpg").getImage();
+		p3IMAGE.setIcon(new ImageIcon(image));
+		
+		java.awt.Image imgP4 = new ImageIcon("ui/binder.jpg").getImage();
+		p4IMAGE.setIcon(new ImageIcon(image));
+		
+		java.awt.Image imgP5 = new ImageIcon("ui/binder.jpg").getImage();
+		p5IMAGE.setIcon(new ImageIcon(image));
+		
+		java.awt.Image imgP6 = new ImageIcon("ui/binder.jpg").getImage();
+		p6IMAGE.setIcon(new ImageIcon(image));
 //Set Product Name
 //Set Price
 		
