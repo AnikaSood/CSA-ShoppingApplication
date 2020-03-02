@@ -185,11 +185,11 @@ public class CartUI extends JFrame {
 		label_5.setBounds(914, 172, 334, 238);
 		frame.getContentPane().add(label_5);
 		
-		JButton btnBack = new JButton("Back");
+		JButton btnBack = new JButton("<");
 		btnBack.setBounds(64, 278, 25, 29);
 		frame.getContentPane().add(btnBack);
 		
-		JButton nextBTN = new JButton("next");
+		JButton nextBTN = new JButton(">");
 		nextBTN.setBounds(1285, 278, 25, 29);
 		frame.getContentPane().add(nextBTN);
 		
@@ -263,22 +263,10 @@ public class CartUI extends JFrame {
 		btnNewButton_1.setBounds(1117, 630, 210, 29);
 		frame.getContentPane().add(btnNewButton_1);
 		
-		JLabel label_6 = new JLabel("");
-		label_6.setBackground(new Color(65, 105, 225));
-		label_6.setOpaque(true);
-		label_6.setBounds(16, 176, 1284, 351);
-		frame.getContentPane().add(label_6);
-		
 		JLabel label_12 = new JLabel("");
 		label_12.setOpaque(true);
 		label_12.setBounds(28, 92, 1320, 39);
 		frame.getContentPane().add(label_12);
-		
-		JLabel label_13 = new JLabel("");
-		label_13.setOpaque(true);
-		label_13.setBackground(new Color(65, 105, 225));
-		label_13.setBounds(16, 103, 1311, 39);
-		frame.getContentPane().add(label_13);
 		
 		
 		//CATEGORIES HOVER
