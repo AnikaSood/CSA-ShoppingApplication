@@ -20,6 +20,7 @@ import java.awt.Font;
 import java.awt.ComponentOrientation;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
 
 public class StartingScreenUI extends JFrame {
 	private static final long serialVersionUID = 1L;
@@ -66,8 +67,8 @@ public class StartingScreenUI extends JFrame {
 		//WHEN CART BUTTON IS CLICKED, IT WILL OPEN CARTUI
 		btnCart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				CartUI x = new CartUI();
-				x.setVisible(true);
+				CartUI frame = new CartUI();
+				frame.openFrame();
 				
 			}
 		});
@@ -168,6 +169,132 @@ public class StartingScreenUI extends JFrame {
 		label_2.setOpaque(true);
 		label_2.setBounds(0, 53, 1370, 7);
 		frame.getContentPane().add(label_2);
+		
+		JLabel lblTodaysTopPicks = new JLabel("Today's Top Picks");
+		lblTodaysTopPicks.setFont(new Font("Lucida Grande", Font.PLAIN, 26));
+		lblTodaysTopPicks.setBounds(55, 84, 253, 39);
+		frame.getContentPane().add(lblTodaysTopPicks);
+		
+		JLabel p1IMAGE = new JLabel("");
+		p1IMAGE.setOpaque(true);
+		p1IMAGE.setBackground(Color.LIGHT_GRAY);
+		p1IMAGE.setBounds(55, 135, 334, 238);
+		frame.getContentPane().add(p1IMAGE);
+		
+		JLabel p2IMAGE = new JLabel("");
+		p2IMAGE.setOpaque(true);
+		p2IMAGE.setBackground(Color.LIGHT_GRAY);
+		p2IMAGE.setBounds(518, 135, 334, 238);
+		frame.getContentPane().add(p2IMAGE);
+		
+		JLabel p3IMAGE = new JLabel("");
+		p3IMAGE.setOpaque(true);
+		p3IMAGE.setBackground(Color.LIGHT_GRAY);
+		p3IMAGE.setBounds(966, 135, 334, 238);
+		frame.getContentPane().add(p3IMAGE);
+		
+		JLabel p4IMAGE = new JLabel("");
+		p4IMAGE.setOpaque(true);
+		p4IMAGE.setBackground(Color.LIGHT_GRAY);
+		p4IMAGE.setBounds(55, 442, 334, 238);
+		frame.getContentPane().add(p4IMAGE);
+		
+		JLabel p5IMAGE = new JLabel("");
+		p5IMAGE.setOpaque(true);
+		p5IMAGE.setBackground(Color.LIGHT_GRAY);
+		p5IMAGE.setBounds(518, 442, 334, 238);
+		frame.getContentPane().add(p5IMAGE);
+		
+		JButton p1NAMEbtn = new JButton("Product Name");
+		p1NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
+		p1NAMEbtn.setHorizontalTextPosition(SwingConstants.LEFT);
+		p1NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
+		p1NAMEbtn.setVerticalAlignment(SwingConstants.BOTTOM);
+		p1NAMEbtn.setBorderPainted(false);
+		p1NAMEbtn.setBounds(38, 377, 207, 29);
+		frame.getContentPane().add(p1NAMEbtn);
+		
+		JLabel p1PRICElbl = new JLabel("$");
+		p1PRICElbl.setBounds(62, 404, 65, 16);
+		frame.getContentPane().add(p1PRICElbl);
+		
+		JButton p2NAMEbtn = new JButton("Product Name");
+		p2NAMEbtn.setVerticalAlignment(SwingConstants.BOTTOM);
+		p2NAMEbtn.setHorizontalTextPosition(SwingConstants.LEFT);
+		p2NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
+		p2NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
+		p2NAMEbtn.setBorderPainted(false);
+		p2NAMEbtn.setBounds(497, 377, 207, 29);
+		frame.getContentPane().add(p2NAMEbtn);
+		
+		JLabel p2PRICElbl = new JLabel("$");
+		p2PRICElbl.setBounds(518, 404, 65, 16);
+		frame.getContentPane().add(p2PRICElbl);
+		
+		JButton p3NAMEbtn = new JButton("Product Name");
+		p3NAMEbtn.setVerticalAlignment(SwingConstants.BOTTOM);
+		p3NAMEbtn.setHorizontalTextPosition(SwingConstants.LEFT);
+		p3NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
+		p3NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
+		p3NAMEbtn.setBorderPainted(false);
+		p3NAMEbtn.setBounds(944, 377, 207, 29);
+		frame.getContentPane().add(p3NAMEbtn);
+		
+		JLabel p3PRICElbl = new JLabel("$");
+		p3PRICElbl.setBounds(966, 404, 65, 16);
+		frame.getContentPane().add(p3PRICElbl);
+		
+		JButton p4NAMEbtn = new JButton("Product Name");
+		p4NAMEbtn.setVerticalAlignment(SwingConstants.BOTTOM);
+		p4NAMEbtn.setHorizontalTextPosition(SwingConstants.LEFT);
+		p4NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
+		p4NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
+		p4NAMEbtn.setBorderPainted(false);
+		p4NAMEbtn.setBounds(32, 682, 213, 29);
+		frame.getContentPane().add(p4NAMEbtn);
+		
+		JLabel p4PRICElbl = new JLabel("$");
+		p4PRICElbl.setBounds(55, 709, 65, 16);
+		frame.getContentPane().add(p4PRICElbl);
+		
+		JButton p5NAMEbtn = new JButton("Product Name");
+		p5NAMEbtn.setVerticalAlignment(SwingConstants.BOTTOM);
+		p5NAMEbtn.setHorizontalTextPosition(SwingConstants.LEFT);
+		p5NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
+		p5NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
+		p5NAMEbtn.setBorderPainted(false);
+		p5NAMEbtn.setBounds(497, 684, 213, 29);
+		frame.getContentPane().add(p5NAMEbtn);
+		
+		JLabel p5PRICElbl = new JLabel("$");
+		p5PRICElbl.setBounds(518, 709, 65, 16);
+		frame.getContentPane().add(p5PRICElbl);
+		
+		JLabel p6IMAGE = new JLabel("");
+		p6IMAGE.setOpaque(true);
+		p6IMAGE.setBackground(Color.LIGHT_GRAY);
+		p6IMAGE.setBounds(966, 442, 334, 238);
+		frame.getContentPane().add(p6IMAGE);
+		
+		JButton p6NAMEbtn = new JButton("Product Name");
+		p6NAMEbtn.setVerticalAlignment(SwingConstants.BOTTOM);
+		p6NAMEbtn.setHorizontalTextPosition(SwingConstants.LEFT);
+		p6NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
+		p6NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
+		p6NAMEbtn.setBorderPainted(false);
+		p6NAMEbtn.setBounds(944, 684, 213, 29);
+		frame.getContentPane().add(p6NAMEbtn);
+		
+		JLabel p6PRICElbl = new JLabel("$");
+		p6PRICElbl.setBounds(966, 709, 65, 16);
+		frame.getContentPane().add(p6PRICElbl);
+		
+		JButton btnSeeMoreResults = new JButton("See More Results");
+		btnSeeMoreResults.setBackground(Color.ORANGE);
+		btnSeeMoreResults.setOpaque(true);
+		btnSeeMoreResults.setBorderPainted(false);
+		btnSeeMoreResults.setBounds(1202, 718, 162, 29);
+		frame.getContentPane().add(btnSeeMoreResults);
 		
 		
 		//CATEGORIES HOVER

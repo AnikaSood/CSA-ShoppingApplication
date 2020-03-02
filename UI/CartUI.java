@@ -28,10 +28,24 @@ public class CartUI extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
-
+	
+	public static void openFrame() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CartUI window = new CartUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 	public CartUI() {
 	
 		frame = new JFrame();
+		frame.setBounds(0, 0, 1370, 775);
+
 		frame.setBackground(Color.WHITE);
 		frame.getContentPane().setBackground(Color.WHITE);
 		

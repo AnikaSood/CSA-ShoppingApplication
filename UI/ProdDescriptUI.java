@@ -30,6 +30,7 @@ public class ProdDescriptUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 
+	
 	public ProdDescriptUI() {
 	
 		frame = new JFrame();
@@ -165,7 +166,7 @@ public class ProdDescriptUI extends JFrame {
 		
 		JLabel lblDescription = new JLabel("Description:");
 		lblDescription.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblDescription.setBounds(527, 107, 297, 39);
+		lblDescription.setBounds(537, 107, 297, 39);
 		frame.getContentPane().add(lblDescription);
 		
 		JTextArea txtrDfghj = new JTextArea();
