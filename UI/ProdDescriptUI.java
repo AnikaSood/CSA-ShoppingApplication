@@ -1,27 +1,26 @@
 package UI;
-import java.util.ArrayList;
-import java.util.List; 
 import java.awt.Color;
+import java.awt.ComponentOrientation;
 import java.awt.EventQueue;
-import code.*;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.UIManager;
 import javax.swing.border.MatteBorder;
 
-
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.SystemColor;
-import javax.swing.JTextArea;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.ComponentOrientation;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.UIManager;
+import code.Product;
+import code.Storage;
 
 public class ProdDescriptUI extends JFrame {
 	
@@ -48,7 +47,7 @@ public class ProdDescriptUI extends JFrame {
 
 
 	
-	public ProdDescriptUI(String prodImage) {
+	public ProdDescriptUI(String passedProdName) {
 	
 		frame = new JFrame();
 		frame.setBackground(Color.WHITE);
@@ -166,31 +165,32 @@ public class ProdDescriptUI extends JFrame {
 		label_2.setBounds(0, 53, 1370, 7);
 		frame.getContentPane().add(label_2);
 		
-		JLabel label_3 = new JLabel("");
-		label_3.setOpaque(true);
-		label_3.setBounds(16, 83, 433, 357);
-		frame.getContentPane().add(label_3);
+		JLabel prodImage = new JLabel("");
+		prodImage.setOpaque(true);
+		prodImage.setBounds(54, 120, 334, 238);
+		frame.getContentPane().add(prodImage);
 		
-		JLabel lblProductName = new JLabel("Product Name");
-		lblProductName.setFont(new Font("Lucida Grande", Font.PLAIN, 37));
-		lblProductName.setBounds(16, 452, 297, 39);
-		frame.getContentPane().add(lblProductName);
+		JLabel name = new JLabel("Product Name");
+		name.setFont(new Font("Lucida Grande", Font.PLAIN, 37));
+		name.setBounds(54, 370, 297, 39);
+		frame.getContentPane().add(name);
 		
-		JLabel label_4 = new JLabel("$");
-		label_4.setFont(new Font("Lucida Grande", Font.PLAIN, 27));
-		label_4.setBounds(16, 503, 224, 39);
-		frame.getContentPane().add(label_4);
+		JLabel price = new JLabel("$");
+		price.setFont(new Font("Lucida Grande", Font.PLAIN, 27));
+		price.setBounds(54, 412, 224, 39);
+		frame.getContentPane().add(price);
 		
 		JLabel lblDescription = new JLabel("Description:");
-		lblDescription.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblDescription.setBounds(459, 83, 297, 39);
+		lblDescription.setFont(new Font("Lucida Grande", Font.PLAIN, 37));
+		lblDescription.setBounds(461, 120, 297, 39);
 		frame.getContentPane().add(lblDescription);
 		
-		JTextArea txtrDfghj = new JTextArea();
-		txtrDfghj.setBackground(UIManager.getColor("Button.background"));
-		txtrDfghj.setText("The Description Goes Here");
-		txtrDfghj.setBounds(461, 120, 734, 508);
-		frame.getContentPane().add(txtrDfghj);
+		JTextArea prodDescript = new JTextArea();
+		prodDescript.setFont(new Font("Lucida Grande", Font.PLAIN, 29));
+		prodDescript.setBackground(UIManager.getColor("Button.background"));
+		prodDescript.setText("The Description Goes Here");
+		prodDescript.setBounds(461, 189, 699, 262);
+		frame.getContentPane().add(prodDescript);
 		
 		JButton btnAddToCart = new JButton("Add to Cart");
 		btnAddToCart.addActionListener(new ActionListener() {
@@ -203,7 +203,7 @@ public class ProdDescriptUI extends JFrame {
 		btnAddToCart.setBackground(Color.ORANGE);
 		btnAddToCart.setBorderPainted(false);
 		btnAddToCart.setOpaque(true);
-		btnAddToCart.setBounds(16, 582, 433, 29);
+		btnAddToCart.setBounds(816, 481, 344, 29);
 		frame.getContentPane().add(btnAddToCart);
 		
 		
@@ -270,6 +270,21 @@ public class ProdDescriptUI extends JFrame {
 				panel.setBounds(147, 6, 144, 39);
 			}
 		});
+		
+		
+/****************************************************************************************************/
+		Storage x = new Storage();
+		List<Product> allProds = x.getProds();
+		
+		
+		name.setText(passedProdName);
+		
+		java.awt.Image prodIMG = new ImageIcon(allProds.get(allProds.indexOf(passedProdName)).getImage()).getImage();
+		prodImage.setIcon(new ImageIcon(prodIMG));
+		
+		prodDescript.setText(allProds.get(allProds.indexOf(passedProdName)).makeDescription());
+		
+		price.setText("$ "+allProds.get(allProds.indexOf(passedProdName)).getPrice()+"");
 		
 		
 	}
