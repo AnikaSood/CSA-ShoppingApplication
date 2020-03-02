@@ -26,7 +26,7 @@ import javax.swing.UIManager;
 public class ProdDescriptUI extends JFrame {
 	
 	List<Product> buying = new ArrayList<Product>(); 
-
+	
 	/**
 	 * 
 	 */
@@ -37,7 +37,7 @@ public class ProdDescriptUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ProdDescriptUI window = new ProdDescriptUI();
+					ProdDescriptUI window = new ProdDescriptUI("ghj");
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +48,7 @@ public class ProdDescriptUI extends JFrame {
 
 
 	
-	public ProdDescriptUI() {
+	public ProdDescriptUI(String prodImage) {
 	
 		frame = new JFrame();
 		frame.setBackground(Color.WHITE);
