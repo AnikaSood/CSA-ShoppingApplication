@@ -406,12 +406,12 @@ public class StartingScreenUI extends JFrame {
 		
 		//Set Price
 		
-		p1PRICElbl.setText(""+allProds.get(0).getPrice());
-		p2PRICElbl.setText(""+allProds.get(1).getPrice());
-		p3PRICElbl.setText(""+allProds.get(2).getPrice());
-		p4PRICElbl.setText(""+allProds.get(3).getPrice());
-		p5PRICElbl.setText(""+allProds.get(4).getPrice());
-		p6PRICElbl.setText(""+allProds.get(5).getPrice());
+		p1PRICElbl.setText("$ "+allProds.get(0).getPrice());
+		p2PRICElbl.setText("$ "+allProds.get(1).getPrice());
+		p3PRICElbl.setText("$ "+allProds.get(2).getPrice());
+		p4PRICElbl.setText("$ "+allProds.get(3).getPrice());
+		p5PRICElbl.setText("$ "+allProds.get(4).getPrice());
+		p6PRICElbl.setText("$ "+allProds.get(5).getPrice());
 
 /**********WHEN THE SEARCH BUTTON IS CLICKED*************/
 		btnSearch.addActionListener(new ActionListener() {
