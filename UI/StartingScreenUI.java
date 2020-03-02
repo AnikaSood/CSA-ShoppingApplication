@@ -416,7 +416,22 @@ public class StartingScreenUI extends JFrame {
 				String searchInput = txtrSearchBar.getText();
 				SearchControl results = new SearchControl();
 				List<Product> result = results.searchReturn(searchInput);
-				//	ssc.getImages(searchInput); //Returns list of all images needed when search is completed
+				
+				JLabel[] resultIMGS = {p1IMAGE, p2IMAGE, p3IMAGE, p4IMAGE, p5IMAGE, p6IMAGE};
+				JButton[] resultNAME = {p1NAMEbtn, p2NAMEbtn, p3NAMEbtn, p4NAMEbtn, p5NAMEbtn, p6NAMEbtn};
+				JLabel[] resultPRICE = {p1PRICElbl, p2PRICElbl, p3PRICElbl, p4PRICElbl, p5PRICElbl, p6PRICElbl};
+
+				int numOfResults = result.size();
+				for (int i = 0; i<numOfResults; i++)
+				{
+					java.awt.Image toSet = new ImageIcon(result.get(i).getImage()).getImage();
+					resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
+					resultNAME[i].setText(result.get(i).getName()); //set product name
+					resultPRICE[i].setText(""+result.get(i).getPrice()+"");
+				}
+				
+				
+				
 			}
 		});
 /*******************************************************/
