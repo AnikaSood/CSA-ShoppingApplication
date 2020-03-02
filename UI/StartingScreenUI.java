@@ -30,9 +30,12 @@ public class StartingScreenUI extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
+		
+		EventQueue.invokeLater(new Runnable() 
+		{
 			public void run() {
-				try {
+				try 
+				{
 					StartingScreenUI window = new StartingScreenUI();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
@@ -64,14 +67,6 @@ public class StartingScreenUI extends JFrame {
 		
 		JButton btnCart = new JButton("");
 		
-		//WHEN CART BUTTON IS CLICKED, IT WILL OPEN CARTUI
-		btnCart.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				CartUI frame = new CartUI();
-				frame.openFrame();
-				
-			}
-		});
 		btnCart.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		btnCart.setForeground(Color.WHITE);
 		btnCart.setRequestFocusEnabled(false);
@@ -362,6 +357,16 @@ public class StartingScreenUI extends JFrame {
 			@Override
 			public void mouseExited(MouseEvent e) {
 				panel.setBounds(147, 6, 144, 39);
+			}
+		});
+		
+
+		//WHEN CART BUTTON IS CLICKED, IT WILL OPEN CARTUI
+		btnCart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				CartUI frame = new CartUI();
+				CartUI.openFrame();
+				
 			}
 		});
 /********Setting the top picks*************/		
