@@ -56,7 +56,7 @@ public class StartingScreenUI extends JFrame {
 		frame.setBackground(Color.WHITE);
 		frame.getContentPane().setBackground(Color.WHITE);
 		
-		frame.setBounds(0, 0, 1223, 705);
+		frame.setBounds(0, 0, 1223, 710);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		frame.getContentPane().setLayout(null);
