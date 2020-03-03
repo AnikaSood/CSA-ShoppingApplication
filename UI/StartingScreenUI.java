@@ -46,7 +46,18 @@ public class StartingScreenUI extends JFrame {
 			}
 		});
 	}
-
+	public static void openFrame(String pName) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					StartingScreenUI window = new StartingScreenUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 	/**
 	 * Create the application.
 	 */
