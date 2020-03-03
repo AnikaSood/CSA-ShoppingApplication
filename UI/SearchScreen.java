@@ -89,7 +89,7 @@ public class SearchScreen extends JFrame {
 		txtrSearchBar.setDragEnabled(false);
 		txtrSearchBar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		txtrSearchBar.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		txtrSearchBar.setBounds(266, 16, 756, 16);
+		txtrSearchBar.setBounds(297, 16, 725, 16);
 		frame.getContentPane().add(txtrSearchBar);
 	
 		
@@ -97,7 +97,7 @@ public class SearchScreen extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(211, 211, 211));
 		
-		panel.setBounds(110, 6, 144, 39);
+		panel.setBounds(147, 6, 144, 39);
 		frame.getContentPane().add(panel);
 		
 		JButton btnCategories = new JButton("   Categories    ");
@@ -213,7 +213,7 @@ public class SearchScreen extends JFrame {
 		frame.getContentPane().add(p1NAMEbtn);
 		
 		JLabel p1PRICElbl = new JLabel("$");
-		p1PRICElbl.setBounds(33, 376, 65, 16);
+		p1PRICElbl.setBounds(23, 376, 75, 16);
 		frame.getContentPane().add(p1PRICElbl);
 		
 		JButton p2NAMEbtn = new JButton("Product Name");
@@ -392,7 +392,7 @@ public class SearchScreen extends JFrame {
 			java.awt.Image toSet = new ImageIcon(result.get(i).getImage()).getImage();
 			resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
 			resultNAME[i].setText(result.get(i).getName()); //set product name
-			resultPRICE[i].setText("$ "+result.get(i).getPrice()+"");
+			resultPRICE[i].setText("$"+result.get(i).getPrice()+"");
 		}	
 	
 		
@@ -477,7 +477,7 @@ public class SearchScreen extends JFrame {
 					java.awt.Image toSet = new ImageIcon(result.get(i).getImage()).getImage();
 					resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
 					resultNAME[i].setText(result.get(i).getName()); //set product name
-					resultPRICE[i].setText("$ "+result.get(i).getPrice()+"");
+					resultPRICE[i].setText("$"+result.get(i).getPrice()+"");
 				}	
 			
 				

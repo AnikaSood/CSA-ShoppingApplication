@@ -104,7 +104,7 @@ public class StartingScreenUI extends JFrame {
 		txtrSearchBar.setDragEnabled(false);
 		txtrSearchBar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		txtrSearchBar.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		txtrSearchBar.setBounds(266, 16, 756, 16);
+		txtrSearchBar.setBounds(297, 16, 725, 16);
 		frame.getContentPane().add(txtrSearchBar);
 	
 		
@@ -112,7 +112,7 @@ public class StartingScreenUI extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(211, 211, 211));
 		
-		panel.setBounds(110, 6, 144, 39);
+		panel.setBounds(147, 6, 144, 39);
 		frame.getContentPane().add(panel);
 		
 		JButton btnCategories = new JButton("   Categories    ");
@@ -178,7 +178,7 @@ public class StartingScreenUI extends JFrame {
 		
 		JLabel label_2 = new JLabel("");
 		label_2.setOpaque(true);
-		label_2.setBounds(0, 53, 1212, 8);
+		label_2.setBounds(0, 53, 1223, 8);
 		frame.getContentPane().add(label_2);
 		
 		JLabel topLabel = new JLabel("Today's Top Picks");
@@ -410,12 +410,12 @@ public class StartingScreenUI extends JFrame {
 		
 		//Set Price
 		
-		p1PRICElbl.setText("$ "+allProds.get(0).getPrice());
-		p2PRICElbl.setText("$ "+allProds.get(1).getPrice());
-		p3PRICElbl.setText("$ "+allProds.get(2).getPrice());
-		p4PRICElbl.setText("$ "+allProds.get(3).getPrice());
-		p5PRICElbl.setText("$ "+allProds.get(4).getPrice());
-		p6PRICElbl.setText("$ "+allProds.get(5).getPrice());
+		p1PRICElbl.setText("$"+allProds.get(0).getPrice());
+		p2PRICElbl.setText("$"+allProds.get(1).getPrice());
+		p3PRICElbl.setText("$"+allProds.get(2).getPrice());
+		p4PRICElbl.setText("$"+allProds.get(3).getPrice());
+		p5PRICElbl.setText("$"+allProds.get(4).getPrice());
+		p6PRICElbl.setText("$"+allProds.get(5).getPrice());
 
 /**********WHEN THE SEARCH BUTTON IS CLICKED*************/
 		btnSearch.addActionListener(new ActionListener() {
@@ -454,7 +454,7 @@ public class StartingScreenUI extends JFrame {
 					java.awt.Image toSet = new ImageIcon(result.get(i).getImage()).getImage();
 					resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
 					resultNAME[i].setText(result.get(i).getName()); //set product name
-					resultPRICE[i].setText("$ "+result.get(i).getPrice()+"");
+					resultPRICE[i].setText("$"+result.get(i).getPrice()+"");
 				}	
 			
 				

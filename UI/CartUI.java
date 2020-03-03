@@ -90,7 +90,7 @@ public class CartUI extends JFrame {
 		txtrSearchBar.setDragEnabled(false);
 		txtrSearchBar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		txtrSearchBar.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		txtrSearchBar.setBounds(264, 16, 758, 16);
+		txtrSearchBar.setBounds(293, 16, 729, 16);
 		frame.getContentPane().add(txtrSearchBar);
 	
 		
@@ -98,7 +98,7 @@ public class CartUI extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(211, 211, 211));
 		
-		panel.setBounds(110, 6, 144, 39);
+		panel.setBounds(147, 6, 144, 39);
 		frame.getContentPane().add(panel);
 		
 		JButton btnCategories = new JButton("   Categories    ");

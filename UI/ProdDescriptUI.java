@@ -91,7 +91,7 @@ public class ProdDescriptUI extends JFrame {
 		txtrSearchBar.setDragEnabled(false);
 		txtrSearchBar.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
 		txtrSearchBar.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		txtrSearchBar.setBounds(266, 16, 756, 16);
+		txtrSearchBar.setBounds(295, 16, 727, 16);
 		frame.getContentPane().add(txtrSearchBar);
 	
 		
@@ -99,7 +99,7 @@ public class ProdDescriptUI extends JFrame {
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(211, 211, 211));
 		
-		panel.setBounds(110, 6, 144, 39);
+		panel.setBounds(147, 6, 144, 39);
 		frame.getContentPane().add(panel);
 		
 		JButton btnCategories = new JButton("   Categories    ");
@@ -298,7 +298,7 @@ public class ProdDescriptUI extends JFrame {
 		
 		prodDescript.setText(prod.get(0).makeDescription());
 		
-		price.setText("$ "+prod.get(0).getPrice()+"");
+		price.setText("$"+prod.get(0).getPrice()+"");
 		
 		/*******************HOME BUTTON CLICKED************************/
 		homeButton.addActionListener(new ActionListener() {
