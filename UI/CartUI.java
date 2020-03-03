@@ -62,7 +62,7 @@ public class CartUI extends JFrame {
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setOpaque(true);
 		lblNewLabel.setBackground(Color.LIGHT_GRAY);
-		lblNewLabel.setBounds(54, 172, 334, 238);
+		lblNewLabel.setBounds(87, 172, 334, 238);
 		frame.getContentPane().add(lblNewLabel);
 		
 		
@@ -170,89 +170,89 @@ public class CartUI extends JFrame {
 		JLabel lblYourCart = new JLabel("Your Cart");
 		lblYourCart.setBackground(Color.ORANGE);
 		lblYourCart.setFont(new Font("Lucida Grande", Font.PLAIN, 25));
-		lblYourCart.setBounds(28, 92, 193, 39);
+		lblYourCart.setBounds(34, 92, 193, 39);
 		frame.getContentPane().add(lblYourCart);
 		
 		JLabel label_4 = new JLabel("");
 		label_4.setOpaque(true);
 		label_4.setBackground(Color.LIGHT_GRAY);
-		label_4.setBounds(451, 172, 334, 238);
+		label_4.setBounds(518, 172, 334, 238);
 		frame.getContentPane().add(label_4);
 		
 		JLabel label_5 = new JLabel("");
 		label_5.setOpaque(true);
 		label_5.setBackground(Color.LIGHT_GRAY);
-		label_5.setBounds(851, 172, 334, 238);
+		label_5.setBounds(939, 172, 334, 238);
 		frame.getContentPane().add(label_5);
 		
 		JButton btnBack = new JButton("<");
-		btnBack.setBounds(17, 278, 25, 29);
+		btnBack.setBounds(50, 278, 25, 29);
 		frame.getContentPane().add(btnBack);
 		
 		JButton nextBTN = new JButton(">");
-		nextBTN.setBounds(1285, 278, 25, 29);
+		nextBTN.setBounds(1296, 278, 25, 29);
 		frame.getContentPane().add(nextBTN);
 		
 		JLabel lblProdName = new JLabel("Prod Name");
 		lblProdName.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblProdName.setBounds(54, 411, 334, 44);
+		lblProdName.setBounds(87, 411, 334, 44);
 		frame.getContentPane().add(lblProdName);
 		
 		JLabel lblPrice = new JLabel("Price");
 		lblPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		lblPrice.setBounds(54, 452, 334, 16);
+		lblPrice.setBounds(87, 452, 334, 16);
 		frame.getContentPane().add(lblPrice);
 		
 		JButton btnNewButton = new JButton("Remove Item");
 		btnNewButton.setOpaque(true);
 		btnNewButton.setBackground(new Color(204, 51, 0));
 		btnNewButton.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		btnNewButton.setBounds(54, 480, 334, 16);
+		btnNewButton.setBounds(87, 480, 334, 16);
 		frame.getContentPane().add(btnNewButton);
 		
 		JLabel label_7 = new JLabel("Prod Name");
 		label_7.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		label_7.setBounds(451, 411, 334, 44);
+		label_7.setBounds(518, 411, 334, 44);
 		frame.getContentPane().add(label_7);
 		
 		JLabel label_8 = new JLabel("Price");
 		label_8.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		label_8.setBounds(451, 452, 334, 16);
+		label_8.setBounds(518, 452, 334, 16);
 		frame.getContentPane().add(label_8);
 		
 		JButton button = new JButton("Remove Item");
 		button.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		button.setBounds(451, 480, 334, 16);
+		button.setBounds(518, 480, 334, 16);
 		frame.getContentPane().add(button);
 		
 		JButton button_1 = new JButton("Remove Item");
 		button_1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		button_1.setBounds(851, 480, 334, 16);
+		button_1.setBounds(939, 480, 334, 16);
 		frame.getContentPane().add(button_1);
 		
 		JLabel label_9 = new JLabel("Prod Name");
 		label_9.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		label_9.setBounds(851, 411, 334, 44);
+		label_9.setBounds(939, 411, 334, 44);
 		frame.getContentPane().add(label_9);
 		
 		JLabel label_10 = new JLabel("Price");
 		label_10.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		label_10.setBounds(851, 452, 334, 16);
+		label_10.setBounds(939, 452, 334, 16);
 		frame.getContentPane().add(label_10);
 		
 		JLabel label_3 = new JLabel("");
 		label_3.setOpaque(true);
-		label_3.setBounds(6, 164, 1284, 344);
+		label_3.setBounds(43, 164, 1284, 344);
 		frame.getContentPane().add(label_3);
 		
 		JLabel lblTotalPrice = new JLabel("Total: $");
 		lblTotalPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblTotalPrice.setBounds(960, 574, 99, 44);
+		lblTotalPrice.setBounds(1106, 520, 99, 44);
 		frame.getContentPane().add(lblTotalPrice);
 		
 		JLabel label_11 = new JLabel("12345678");
 		label_11.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		label_11.setBounds(1058, 574, 127, 44);
+		label_11.setBounds(1200, 520, 127, 44);
 		frame.getContentPane().add(label_11);
 		
 		JButton btnNewButton_1 = new JButton("Pay Now");
@@ -260,12 +260,12 @@ public class CartUI extends JFrame {
 		btnNewButton_1.setBackground(Color.ORANGE);
 		btnNewButton_1.setOpaque(true);
 		btnNewButton_1.setBorderPainted(false);
-		btnNewButton_1.setBounds(970, 616, 210, 29);
+		btnNewButton_1.setBounds(1111, 574, 210, 29);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JLabel label_12 = new JLabel("");
 		label_12.setOpaque(true);
-		label_12.setBounds(7, 92, 1320, 39);
+		label_12.setBounds(25, 92, 1320, 39);
 		frame.getContentPane().add(label_12);
 		
 		
