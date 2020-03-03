@@ -144,6 +144,7 @@ public class SearchScreen extends JFrame {
 		label.setOpaque(true);
 		
 		JButton homeButton = new JButton("");
+		
 		homeButton.setRequestFocusEnabled(false);
 		homeButton.setOpaque(true);
 		homeButton.setForeground(Color.WHITE);
@@ -524,9 +525,18 @@ public class SearchScreen extends JFrame {
 				ProdDescriptUI.openFrame(p6NAMEbtn.getText()); 
 			}
 		});
+		
+		/*******************HOME BUTTON CLICKED************************/
+		homeButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				StartingScreenUI frame = new StartingScreenUI();
+				frame.openFrame();
+				
+			}
+		});
 	}
 	
-	
+
 	
 }
 

@@ -300,7 +300,14 @@ public class ProdDescriptUI extends JFrame {
 		
 		price.setText("$ "+prod.get(0).getPrice()+"");
 		
-		
+		/*******************HOME BUTTON CLICKED************************/
+		homeButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				StartingScreenUI frame = new StartingScreenUI();
+				frame.openFrame();
+				
+			}
+		});
 	}
 }
 
