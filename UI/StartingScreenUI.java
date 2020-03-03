@@ -429,6 +429,11 @@ public class StartingScreenUI extends JFrame {
 					resultNAME[i].setText(""); //set product name
 					resultPRICE[i].setText("");					
 				}
+				
+				if(result.size()==0)
+				{
+					topLabel.setText("No Results Found");
+				}
 			
 				int i = 0;
 				int numOfResults = result.size();
