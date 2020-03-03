@@ -1,5 +1,6 @@
 package UI;
 import java.awt.Color;
+import code.*;
 import java.awt.ComponentOrientation;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -200,7 +201,9 @@ public class ProdDescriptUI extends JFrame {
 		btnAddToCart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
+				InCart cart = new InCart();
+				Product needToPlace = cart.getProd(passedProdName);
+				cart.addToList(needToPlace);
 				
 			}
 		});
