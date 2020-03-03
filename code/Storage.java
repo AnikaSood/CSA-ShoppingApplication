@@ -28,7 +28,7 @@ public class Storage {
 		
 		shoe1 = new Shoes("Shoes", "The Classic Clog", 9.99, "Puke Green", "Crocs", "Clogs", "ui/crocs.jpg"); //
 		shoe2 = new Shoes("Shoes", "Men's Slip-on Skate Shoe", 46.70, "White", "Vans", "Slip-ons", "ui/vans.jpg");
-		shoe3 = new Shoes("Shoes", "Air Force 1", 90.00, "Black", "Nike", "Sneakers", "ui/black-air-force-1.jpeg");
+		shoe3 = new Shoes("Shoes", "Air Force 1", 90.00, "Black", "Nike", "Sneakers", "ui/airforce.jpeg");
 		shoe4 = new Shoes("Shoes", "Christian Louboutins", 1195.01, "Gold", "Christian Louboutins", "Pumps", "ui/heels.jpg");
 		
 		supply1 = new SchoolSupplies("Office Supply, School Supply", "Binder", 5.99, "Staples", "Green", "3-ring", "ui/binder.jpg"); 
