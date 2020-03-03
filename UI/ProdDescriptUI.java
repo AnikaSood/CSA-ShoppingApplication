@@ -33,11 +33,11 @@ public class ProdDescriptUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	
-	public static void openFrame() {
+	public static void openFrame(String pName) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ProdDescriptUI window = new ProdDescriptUI("ghj");
+					ProdDescriptUI window = new ProdDescriptUI(pName);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

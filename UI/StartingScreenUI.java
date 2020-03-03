@@ -454,37 +454,37 @@ public class StartingScreenUI extends JFrame {
 		p1NAMEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ProdDescriptUI frame = new ProdDescriptUI(p1NAMEbtn.getText()); //passes the name of the button clicked to the constructor of the prod class
-				ProdDescriptUI.openFrame(); 
+				ProdDescriptUI.openFrame(p1NAMEbtn.getText()); 
 			}
 		});
 		p2NAMEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ProdDescriptUI frame = new ProdDescriptUI(p2NAMEbtn.getText()); 
-				ProdDescriptUI.openFrame(); 
+				ProdDescriptUI.openFrame(p2NAMEbtn.getText()); 
 			}
 		});
 		p3NAMEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ProdDescriptUI frame = new ProdDescriptUI(p3NAMEbtn.getText()); 
-				ProdDescriptUI.openFrame(); 
+				ProdDescriptUI.openFrame(p3NAMEbtn.getText()); 
 			}
 		});
 		p4NAMEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ProdDescriptUI frame = new ProdDescriptUI(p4NAMEbtn.getText()); 
-				ProdDescriptUI.openFrame(); 
+				ProdDescriptUI.openFrame(p4NAMEbtn.getText()); 
 			}
 		});
 		p5NAMEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ProdDescriptUI frame = new ProdDescriptUI(p5NAMEbtn.getText()); 
-				ProdDescriptUI.openFrame(); 
+				ProdDescriptUI.openFrame(p5NAMEbtn.getText()); 
 			}
 		});
 		p6NAMEbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				ProdDescriptUI frame = new ProdDescriptUI(p6NAMEbtn.getText()); 
-				ProdDescriptUI.openFrame(); 
+				ProdDescriptUI.openFrame(p6NAMEbtn.getText()); 
 			}
 		});
 	}
