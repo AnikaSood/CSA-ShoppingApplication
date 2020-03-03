@@ -46,7 +46,7 @@ public class StartingScreenUI extends JFrame {
 			}
 		});
 	}
-	public static void openFrame(String pName) {
+	public static void openFrame() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -504,6 +504,9 @@ public class StartingScreenUI extends JFrame {
 			}
 		});
 	}
+	
+	
+	
 }
 
 

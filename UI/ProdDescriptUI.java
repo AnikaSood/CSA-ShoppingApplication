@@ -79,6 +79,13 @@ public class ProdDescriptUI extends JFrame {
 		btnCart.setIcon(new ImageIcon(cart));
 		
 		JButton btnSearch = new JButton("Search");
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				StartingScreenUI frame = new StartingScreenUI();
+			
+			}
+		});
 		btnSearch.setBorderPainted(false);
 		btnSearch.setBackground(Color.ORANGE);
 		btnSearch.setOpaque(true);
