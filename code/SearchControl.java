@@ -4,9 +4,7 @@ import java.io.*;
 import java.util.List;
 
 import java.util.Scanner;
-import chn.util.*;
-//import chn.util.FileInput;
-//import chn.util.FileOutput;
+
 public class SearchControl {
 	
 Storage store = new Storage();
