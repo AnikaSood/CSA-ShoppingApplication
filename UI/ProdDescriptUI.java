@@ -77,15 +77,10 @@ public class ProdDescriptUI extends JFrame {
 		btnCart.setBounds(1156, 6, 39, 39);
 		frame.getContentPane().add(btnCart);
 		btnCart.setIcon(new ImageIcon(cart));
-		
+
+//WHEN SEARCH IS CLICKED
 		JButton btnSearch = new JButton("Search");
-		btnSearch.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				StartingScreenUI frame = new StartingScreenUI();
-			
-			}
-		});
+	
 		btnSearch.setBorderPainted(false);
 		btnSearch.setBackground(Color.ORANGE);
 		btnSearch.setOpaque(true);
@@ -278,7 +273,16 @@ public class ProdDescriptUI extends JFrame {
 				panel.setBounds(147, 6, 144, 39);
 			}
 		});
-		
+/****************************************************************************************************/
+
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				SearchScreen frame = new SearchScreen(txtrSearchBar.getText());
+				frame.openFrame(txtrSearchBar.getText());
+			
+			}
+		});
 		
 /****************************************************************************************************/
 	

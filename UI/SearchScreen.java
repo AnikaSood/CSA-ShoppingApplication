@@ -23,34 +23,19 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 
-public class StartingScreenUI extends JFrame {
+public class SearchScreen extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		
-		EventQueue.invokeLater(new Runnable() 
-		{
-			public void run() {
-				try 
-				{
-					StartingScreenUI window = new StartingScreenUI();
-					window.frame.setVisible(true);
-					window.getContentPane();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	public static void openFrame() {
+	
+	public static void openFrame(String pass) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					StartingScreenUI window = new StartingScreenUI();
+					SearchScreen window = new SearchScreen(pass);
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -61,7 +46,7 @@ public class StartingScreenUI extends JFrame {
 	/**
 	 * Create the application.
 	 */
-	public StartingScreenUI() {
+	public SearchScreen(String passedSearchItem) {
 	
 		frame = new JFrame();
 		frame.setBackground(Color.WHITE);
@@ -181,7 +166,7 @@ public class StartingScreenUI extends JFrame {
 		label_2.setBounds(0, 53, 1212, 8);
 		frame.getContentPane().add(label_2);
 		
-		JLabel topLabel = new JLabel("Today's Top Picks");
+		JLabel topLabel = new JLabel("Results:");
 		topLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 26));
 		topLabel.setBounds(10, 68, 253, 39);
 		frame.getContentPane().add(topLabel);
@@ -375,7 +360,48 @@ public class StartingScreenUI extends JFrame {
 				
 			}
 		});
-/********Setting the top picks*************/	
+		
+	/*****************************************************/	
+		String searchInput = txtrSearchBar.getText();
+		SearchControl results = new SearchControl();
+		List<Product> result = results.searchReturn(passedSearchItem);
+		
+		JLabel[] resultIMGS = {p1IMAGE, p2IMAGE, p3IMAGE, p4IMAGE, p5IMAGE, p6IMAGE};
+		JButton[] resultNAME = {p1NAMEbtn, p2NAMEbtn, p3NAMEbtn, p4NAMEbtn, p5NAMEbtn, p6NAMEbtn};
+		JLabel[] resultPRICE = {p1PRICElbl, p2PRICElbl, p3PRICElbl, p4PRICElbl, p5PRICElbl, p6PRICElbl};
+		
+		for(int i =0; i<6; i++) {
+			
+			resultIMGS[i].setVisible(false);//(Color.WHITE); //set image
+			resultNAME[i].setText(""); //set product name
+			resultPRICE[i].setText("");					
+		}
+		
+		if(result.size()==0)
+		{
+			topLabel.setText("No Results Found");
+		}
+	
+		int i = 0;
+		int numOfResults = result.size();
+		
+		for (i = 0; i<numOfResults; i++)
+		{
+			resultIMGS[i].setVisible(true);
+			java.awt.Image toSet = new ImageIcon(result.get(i).getImage()).getImage();
+			resultIMGS[i].setIcon(new ImageIcon(toSet)); //set image
+			resultNAME[i].setText(result.get(i).getName()); //set product name
+			resultPRICE[i].setText("$ "+result.get(i).getPrice()+"");
+		}	
+	
+		
+		
+		
+		
+		
+		
+		
+/*
 		
 		Storage stor = new Storage();
 		List<Product> allProds = stor.getProds();
@@ -416,14 +442,10 @@ public class StartingScreenUI extends JFrame {
 		p4PRICElbl.setText("$ "+allProds.get(3).getPrice());
 		p5PRICElbl.setText("$ "+allProds.get(4).getPrice());
 		p6PRICElbl.setText("$ "+allProds.get(5).getPrice());
-
+*/
 /**********WHEN THE SEARCH BUTTON IS CLICKED*************/
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-			
-
-				topLabel.setText("Results:");
 				
 				String searchInput = txtrSearchBar.getText();
 				SearchControl results = new SearchControl();
