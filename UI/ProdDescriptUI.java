@@ -192,23 +192,9 @@ public class ProdDescriptUI extends JFrame {
 		prodDescript.setText("The Description Goes Here");
 		prodDescript.setBounds(461, 189, 699, 323);
 		frame.getContentPane().add(prodDescript);
-//WHEN ADD TO CART IS CLICKED		
+
+		
 		JButton btnAddToCart = new JButton("Add to Cart");
-		btnAddToCart.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				
-
-				Product needToPlace = InCart.getProd(passedProdName);
-				InCart.addToList(needToPlace);
-				
-				for(int i =0; i<InCart.inCart.size(); i++)
-				{
-				System.out.println(InCart.inCart.get(i).getName());
-
-				}
-			}
-		});
 		btnAddToCart.setBackground(Color.ORANGE);
 		btnAddToCart.setBorderPainted(false);
 		btnAddToCart.setOpaque(true);
@@ -343,7 +329,26 @@ public class ProdDescriptUI extends JFrame {
 		
 	
 	
-	
+/********************************* WHEN ADD TO CART IS CLICKED ****************************************/
+		
+		btnAddToCart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+			Cart.addToList(passedProdName); //send the product name to be added to the list
+				
+				
+			/*	
+
+				Product needToPlace = InCart.getProd(passedProdName);
+				InCart.addToList(needToPlace);
+				
+				for(int i =0; i<InCart.inCart.size(); i++)
+				{
+				System.out.println(InCart.inCart.get(i).getName());
+
+				}*/
+			}
+		});
 	
 	}
 	

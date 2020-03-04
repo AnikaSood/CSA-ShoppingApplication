@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.MatteBorder;
 
+import code.Cart;
 import code.InCart;
 import code.Product;
 
@@ -48,7 +49,7 @@ public class CartUI extends JFrame {
 	public CartUI() {
 		
 
-		List<java.awt.Image> images = new ArrayList<java.awt.Image>(); 
+	//	List<java.awt.Image> images = new ArrayList<java.awt.Image>(); 
 		
 	
 		frame = new JFrame();
@@ -201,35 +202,35 @@ public class CartUI extends JFrame {
 		nextBTN.setBounds(1217, 278, 25, 29);
 		frame.getContentPane().add(nextBTN);
 		
-		JLabel lblProdName = new JLabel("Prod Name");
-		lblProdName.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblProdName.setBounds(53, 411, 334, 44);
-		frame.getContentPane().add(lblProdName);
+		JLabel prod1lbl = new JLabel("Prod Name");
+		prod1lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		prod1lbl.setBounds(53, 411, 334, 44);
+		frame.getContentPane().add(prod1lbl);
 		
-		JLabel lblPrice = new JLabel("Price");
-		lblPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		lblPrice.setBounds(53, 452, 334, 16);
-		frame.getContentPane().add(lblPrice);
+		JLabel pprod1lbl = new JLabel("Price");
+		pprod1lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		pprod1lbl.setBounds(53, 452, 334, 16);
+		frame.getContentPane().add(pprod1lbl);
 		
-		JLabel lblProdName2 = new JLabel("Prod Name");
-		lblProdName2.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblProdName2.setBounds(450, 411, 334, 44);
-		frame.getContentPane().add(lblProdName2);
+		JLabel prod2lbl = new JLabel("Prod Name");
+		prod2lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		prod2lbl.setBounds(450, 411, 334, 44);
+		frame.getContentPane().add(prod2lbl);
 		
-		JLabel lblPrice2 = new JLabel("Price");
-		lblPrice2.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		lblPrice2.setBounds(450, 452, 334, 16);
-		frame.getContentPane().add(lblPrice2);
+		JLabel pprod2lbl = new JLabel("Price");
+		pprod2lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		pprod2lbl.setBounds(450, 452, 334, 16);
+		frame.getContentPane().add(pprod2lbl);
 		
-		JLabel lblProdName3 = new JLabel("Prod Name");
-		lblProdName3.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblProdName3.setBounds(871, 411, 334, 44);
-		frame.getContentPane().add(lblProdName3);
+		JLabel prod3lbl = new JLabel("Prod Name");
+		prod3lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		prod3lbl.setBounds(871, 411, 334, 44);
+		frame.getContentPane().add(prod3lbl);
 		
-		JLabel lblPrice3 = new JLabel("Price");
-		lblPrice3.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		lblPrice3.setBounds(871, 452, 334, 16);
-		frame.getContentPane().add(lblPrice3);
+		JLabel pprod3lbl = new JLabel("Price");
+		pprod3lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		pprod3lbl.setBounds(871, 452, 334, 16);
+		frame.getContentPane().add(pprod3lbl);
 		
 		JLabel label_3 = new JLabel("");
 		label_3.setOpaque(true);
@@ -269,7 +270,7 @@ public class CartUI extends JFrame {
 			System.out.println(InCart.inCart.size());
 			images.add(new ImageIcon(InCart.inCart.get(i).getImage()).getImage());
 
-		}*/
+		}
 		
 		prodName.add(lblProdName);
 		prodPrice.add(lblPrice);
@@ -294,18 +295,10 @@ public class CartUI extends JFrame {
 			prodImg.get(i).setVisible(true);
 			prodName.get(i).setText(InCart.inCart.get(i).getName());
 			prodPrice.get(i).setText("$" + InCart.inCart.get(i).getPrice());
-		}
+		} */
 		
 		JButton remove1 = new JButton("Remove Item");
 		remove1.setOpaque(true);
-		remove1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			
-				
-			//don't know how to manage more than 3 products 	
-				
-			}
-		});
 		remove1.setBackground(new Color(204, 51, 0));
 		remove1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		remove1.setBounds(53, 480, 334, 16);
@@ -416,12 +409,27 @@ public class CartUI extends JFrame {
 			}
 		});
 		
-	
+/****************************** Displaying items in the cart ************************************/
+		List<Product> myCart = new ArrayList<Product>(); 
+		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
+		
+		int trackProd = 0;
+		int start = 0; //when next is clicked, start will be 3 & end will be 6 (this will continue when the next is clicked again)
+		int end = 3;
+		//IN GROUPS OF 3
+		
+		for (trackProd = start; trackProd < end; trackProd ++)
+		{
+			
+		}
+		
+		
+
 	
 	
 	
 	}	
-	}
 }
+
 
 
