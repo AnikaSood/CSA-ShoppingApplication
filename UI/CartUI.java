@@ -427,6 +427,10 @@ public class CartUI extends JFrame {
 		int totalItems = myCart.size();
 		int end = 3;
 		
+		if (totalItems <3)
+		{
+			
+		}
 		
 		//FIRST THREE ITEMS OF CART
 		for (i = start; i < end; i ++)
