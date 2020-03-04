@@ -1,6 +1,7 @@
 package UI;
 
 import java.awt.Color;
+import java.util.ArrayList; 
 import java.awt.EventQueue;
 
 import javax.swing.ImageIcon;
@@ -10,9 +11,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.MatteBorder;
 
+import code.InCart;
+import code.Product;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.List;
 import java.awt.SystemColor;
 import javax.swing.JTextArea;
 import java.awt.Component;
@@ -42,6 +46,10 @@ public class CartUI extends JFrame {
 		});
 	}
 	public CartUI() {
+		
+
+		List<java.awt.Image> images = new ArrayList<java.awt.Image>(); 
+		
 	
 		frame = new JFrame();
 		frame.setBounds(0, 0, 1223, 710);
@@ -59,11 +67,11 @@ public class CartUI extends JFrame {
 		java.awt.Image image = new ImageIcon("ui/KPLogo.jpg").getImage();
 		java.awt.Image cart = new ImageIcon("ui/rsz_shopping_cart_large.png").getImage();
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setOpaque(true);
-		lblNewLabel.setBackground(Color.LIGHT_GRAY);
-		lblNewLabel.setBounds(87, 172, 334, 238);
-		frame.getContentPane().add(lblNewLabel);
+		JLabel img1 = new JLabel("");
+		img1.setOpaque(true);
+		img1.setBackground(Color.LIGHT_GRAY);
+		img1.setBounds(53, 172, 334, 238);
+		frame.getContentPane().add(img1);
 		
 		
 		JButton btnCart = new JButton("");
@@ -170,89 +178,72 @@ public class CartUI extends JFrame {
 		JLabel lblYourCart = new JLabel("Your Cart");
 		lblYourCart.setBackground(Color.ORANGE);
 		lblYourCart.setFont(new Font("Lucida Grande", Font.PLAIN, 25));
-		lblYourCart.setBounds(34, 92, 193, 39);
+		lblYourCart.setBounds(16, 92, 193, 39);
 		frame.getContentPane().add(lblYourCart);
 		
-		JLabel label_4 = new JLabel("");
-		label_4.setOpaque(true);
-		label_4.setBackground(Color.LIGHT_GRAY);
-		label_4.setBounds(518, 172, 334, 238);
-		frame.getContentPane().add(label_4);
+		JLabel img2 = new JLabel("");
+		img2.setOpaque(true);
+		img2.setBackground(Color.LIGHT_GRAY);
+		img2.setBounds(450, 172, 334, 238);
+		frame.getContentPane().add(img2);
 		
-		JLabel label_5 = new JLabel("");
-		label_5.setOpaque(true);
-		label_5.setBackground(Color.LIGHT_GRAY);
-		label_5.setBounds(939, 172, 334, 238);
-		frame.getContentPane().add(label_5);
+		JLabel img3 = new JLabel("");
+		img3.setOpaque(true);
+		img3.setBackground(Color.LIGHT_GRAY);
+		img3.setBounds(871, 172, 334, 238);
+		frame.getContentPane().add(img3);
 		
 		JButton btnBack = new JButton("<");
-		btnBack.setBounds(50, 278, 25, 29);
+		btnBack.setBounds(23, 278, 25, 29);
 		frame.getContentPane().add(btnBack);
 		
 		JButton nextBTN = new JButton(">");
-		nextBTN.setBounds(1296, 278, 25, 29);
+		nextBTN.setBounds(1217, 278, 25, 29);
 		frame.getContentPane().add(nextBTN);
 		
 		JLabel lblProdName = new JLabel("Prod Name");
 		lblProdName.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblProdName.setBounds(87, 411, 334, 44);
+		lblProdName.setBounds(53, 411, 334, 44);
 		frame.getContentPane().add(lblProdName);
 		
 		JLabel lblPrice = new JLabel("Price");
 		lblPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		lblPrice.setBounds(87, 452, 334, 16);
+		lblPrice.setBounds(53, 452, 334, 16);
 		frame.getContentPane().add(lblPrice);
 		
-		JButton btnNewButton = new JButton("Remove Item");
-		btnNewButton.setOpaque(true);
-		btnNewButton.setBackground(new Color(204, 51, 0));
-		btnNewButton.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		btnNewButton.setBounds(87, 480, 334, 16);
-		frame.getContentPane().add(btnNewButton);
+		JLabel lblProdName2 = new JLabel("Prod Name");
+		lblProdName2.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		lblProdName2.setBounds(450, 411, 334, 44);
+		frame.getContentPane().add(lblProdName2);
 		
-		JLabel label_7 = new JLabel("Prod Name");
-		label_7.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		label_7.setBounds(518, 411, 334, 44);
-		frame.getContentPane().add(label_7);
+		JLabel lblPrice2 = new JLabel("Price");
+		lblPrice2.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		lblPrice2.setBounds(450, 452, 334, 16);
+		frame.getContentPane().add(lblPrice2);
 		
-		JLabel label_8 = new JLabel("Price");
-		label_8.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		label_8.setBounds(518, 452, 334, 16);
-		frame.getContentPane().add(label_8);
+		JLabel lblProdName3 = new JLabel("Prod Name");
+		lblProdName3.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		lblProdName3.setBounds(871, 411, 334, 44);
+		frame.getContentPane().add(lblProdName3);
 		
-		JButton button = new JButton("Remove Item");
-		button.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		button.setBounds(518, 480, 334, 16);
-		frame.getContentPane().add(button);
-		
-		JButton button_1 = new JButton("Remove Item");
-		button_1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		button_1.setBounds(939, 480, 334, 16);
-		frame.getContentPane().add(button_1);
-		
-		JLabel label_9 = new JLabel("Prod Name");
-		label_9.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		label_9.setBounds(939, 411, 334, 44);
-		frame.getContentPane().add(label_9);
-		
-		JLabel label_10 = new JLabel("Price");
-		label_10.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
-		label_10.setBounds(939, 452, 334, 16);
-		frame.getContentPane().add(label_10);
+		JLabel lblPrice3 = new JLabel("Price");
+		lblPrice3.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
+		lblPrice3.setBounds(871, 452, 334, 16);
+		frame.getContentPane().add(lblPrice3);
 		
 		JLabel label_3 = new JLabel("");
 		label_3.setOpaque(true);
-		label_3.setBounds(43, 164, 1284, 344);
+		label_3.setBounds(16, 157, 1230, 344);
 		frame.getContentPane().add(label_3);
 		
 		JLabel lblTotalPrice = new JLabel("Total: $");
 		lblTotalPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblTotalPrice.setBounds(1106, 520, 99, 44);
+		lblTotalPrice.setBounds(1020, 520, 99, 44);
 		frame.getContentPane().add(lblTotalPrice);
 		
 		JLabel label_11 = new JLabel("12345678");
 		label_11.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		label_11.setBounds(1200, 520, 127, 44);
+		label_11.setBounds(1111, 520, 127, 44);
 		frame.getContentPane().add(label_11);
 		
 		JButton btnNewButton_1 = new JButton("Pay Now");
@@ -260,14 +251,78 @@ public class CartUI extends JFrame {
 		btnNewButton_1.setBackground(Color.ORANGE);
 		btnNewButton_1.setOpaque(true);
 		btnNewButton_1.setBorderPainted(false);
-		btnNewButton_1.setBounds(1111, 574, 210, 29);
+		btnNewButton_1.setBounds(1036, 576, 210, 29);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		JLabel label_12 = new JLabel("");
 		label_12.setOpaque(true);
-		label_12.setBounds(25, 92, 1320, 39);
+		label_12.setBounds(7, 92, 1320, 39);
 		frame.getContentPane().add(label_12);
 		
+		List<JLabel> prodName = new ArrayList<JLabel>(); 
+		List<JLabel> prodPrice = new ArrayList<JLabel>(); 
+		List<JLabel> prodImg = new ArrayList<JLabel>(); 
+		
+/*		
+		for(int i = 0; i<InCart.inCart.size(); i++)
+		{
+			System.out.println(InCart.inCart.size());
+			images.add(new ImageIcon(InCart.inCart.get(i).getImage()).getImage());
+
+		}*/
+		
+		prodName.add(lblProdName);
+		prodPrice.add(lblPrice);
+	
+		for(int i = 0; i<images.size(); i++)
+		{
+			prodImg.get(i).setIcon(new ImageIcon(images.get(i)));
+			
+		}
+		
+		for(int i =0; i<prodName.size(); i++) {
+			
+			prodImg.get(i).setVisible(false);//(Color.WHITE); //set image
+			prodName.get(i).setText(""); //set product name
+			prodPrice.get(i).setText("");					
+		}
+
+	
+		
+		for(int i =0; i <prodName.size(); i++)
+		{
+			prodImg.get(i).setVisible(true);
+			prodName.get(i).setText(InCart.inCart.get(i).getName());
+			prodPrice.get(i).setText("$" + InCart.inCart.get(i).getPrice());
+		}
+		
+		JButton remove1 = new JButton("Remove Item");
+		remove1.setOpaque(true);
+		remove1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				
+			//don't know how to manage more than 3 products 	
+				
+			}
+		});
+		remove1.setBackground(new Color(204, 51, 0));
+		remove1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
+		remove1.setBounds(53, 480, 334, 16);
+		frame.getContentPane().add(remove1);
+		
+	
+		JButton remove2 = new JButton("Remove Item");
+		remove2.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
+		remove2.setBounds(450, 480, 334, 16);
+		frame.getContentPane().add(remove2);
+		
+		JButton remove3 = new JButton("Remove Item");
+		remove3.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
+		remove3.setBounds(871, 480, 334, 16);
+		frame.getContentPane().add(remove3);
+		
+				
 		
 		//CATEGORIES HOVER
 		btnCategories_1.addMouseListener(new MouseAdapter() {

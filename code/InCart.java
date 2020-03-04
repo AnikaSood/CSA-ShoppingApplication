@@ -6,7 +6,7 @@ import code.*;
 
 public class InCart {
 	
-	private static List<Product> inCart = new ArrayList<Product>(); 
+	public static List<Product> inCart = new ArrayList<Product>(); 
 	
 	public InCart()
 	{
@@ -23,7 +23,7 @@ public class InCart {
 		inCart.remove(prod);
 	}
 	
-	public Product getProd(String prodName)
+	public static Product getProd(String prodName)
 	{
 	
 	SearchControl search = new SearchControl();

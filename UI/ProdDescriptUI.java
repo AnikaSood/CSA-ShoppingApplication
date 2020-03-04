@@ -20,10 +20,6 @@ import javax.swing.JTextArea;
 import javax.swing.UIManager;
 import javax.swing.border.MatteBorder;
 
-import code.Product;
-import code.SearchControl;
-import code.Storage;
-
 public class ProdDescriptUI extends JFrame {
 	
 	List<Product> buying = new ArrayList<Product>(); 
@@ -196,15 +192,21 @@ public class ProdDescriptUI extends JFrame {
 		prodDescript.setText("The Description Goes Here");
 		prodDescript.setBounds(461, 189, 699, 323);
 		frame.getContentPane().add(prodDescript);
-		
+//WHEN ADD TO CART IS CLICKED		
 		JButton btnAddToCart = new JButton("Add to Cart");
 		btnAddToCart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				InCart cart = new InCart();
-				Product needToPlace = cart.getProd(passedProdName);
-				cart.addToList(needToPlace);
 				
+
+				Product needToPlace = InCart.getProd(passedProdName);
+				InCart.addToList(needToPlace);
+				
+				for(int i =0; i<InCart.inCart.size(); i++)
+				{
+				System.out.println(InCart.inCart.get(i).getName());
+
+				}
 			}
 		});
 		btnAddToCart.setBackground(Color.ORANGE);
