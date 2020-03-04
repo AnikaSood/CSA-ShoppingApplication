@@ -70,7 +70,7 @@ public class CartUI extends JFrame {
 		
 		JLabel img1 = new JLabel("");
 		img1.setOpaque(true);
-		img1.setBackground(Color.LIGHT_GRAY);
+		img1.setBackground(SystemColor.window);
 		img1.setBounds(53, 172, 334, 238);
 		frame.getContentPane().add(img1);
 		
@@ -184,7 +184,7 @@ public class CartUI extends JFrame {
 		
 		JLabel img2 = new JLabel("");
 		img2.setOpaque(true);
-		img2.setBackground(Color.LIGHT_GRAY);
+		img2.setBackground(SystemColor.window);
 		img2.setBounds(450, 172, 334, 238);
 		frame.getContentPane().add(img2);
 		
@@ -202,22 +202,22 @@ public class CartUI extends JFrame {
 		nextBTN.setBounds(1217, 278, 25, 29);
 		frame.getContentPane().add(nextBTN);
 		
-		JLabel prod1lbl = new JLabel("Prod Name");
+		JLabel prod1lbl = new JLabel("");
 		prod1lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		prod1lbl.setBounds(53, 411, 334, 44);
 		frame.getContentPane().add(prod1lbl);
 		
-		JLabel pprod1lbl = new JLabel("Price");
+		JLabel pprod1lbl = new JLabel("");
 		pprod1lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		pprod1lbl.setBounds(53, 452, 334, 16);
 		frame.getContentPane().add(pprod1lbl);
 		
-		JLabel prod2lbl = new JLabel("Prod Name");
+		JLabel prod2lbl = new JLabel("");
 		prod2lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		prod2lbl.setBounds(450, 411, 334, 44);
 		frame.getContentPane().add(prod2lbl);
 		
-		JLabel pprod2lbl = new JLabel("Price");
+		JLabel pprod2lbl = new JLabel("");
 		pprod2lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		pprod2lbl.setBounds(450, 452, 334, 16);
 		frame.getContentPane().add(pprod2lbl);
@@ -449,6 +449,10 @@ public class CartUI extends JFrame {
 				removeBtnArr[i].setVisible(true);
 			}
 			
+		}
+		else
+		{
+			btnBack.setVisible(true);
 		}
 		
 		
