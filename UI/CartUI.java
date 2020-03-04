@@ -237,10 +237,14 @@ public class CartUI extends JFrame {
 		lblTotalPrice.setBounds(1020, 520, 99, 44);
 		frame.getContentPane().add(lblTotalPrice);
 		
-		JLabel label_11 = new JLabel("12345678");
-		label_11.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		label_11.setBounds(1111, 520, 127, 44);
-		frame.getContentPane().add(label_11);
+		JLabel total = new JLabel();
+		total.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		total.setBounds(1111, 520, 127, 44);
+		frame.getContentPane().add(total);
+		
+		Cart c = new Cart();
+		
+		total.setText(String.valueOf(c.calcPrice(InCart.inCart)));
 		
 		JButton btnNewButton_1 = new JButton("Pay Now");
 		btnNewButton_1.setFont(new Font("Lucida Grande", Font.PLAIN, 25));
