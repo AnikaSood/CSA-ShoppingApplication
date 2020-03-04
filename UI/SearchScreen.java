@@ -487,6 +487,13 @@ public class SearchScreen extends JFrame {
 				
 			}
 		});
+/****************** OPEN THE CART SCREEN ******************/	
+		btnCart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				CartUI frame = new CartUI();
+				CartUI.openFrame();
+			}
+		});
 /******************ACTION PERFORMED FOR PRODUCTS, OPEN DESCRIPT************************************/
 		
 		p1NAMEbtn.addActionListener(new ActionListener() {

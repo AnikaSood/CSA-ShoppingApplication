@@ -63,6 +63,13 @@ public class ProdDescriptUI extends JFrame {
 		
 		
 		JButton btnCart = new JButton("");
+	/****************** OPEN THE CART SCREEN ******************/	
+		btnCart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				CartUI frame = new CartUI();
+				CartUI.openFrame();
+			}
+		});
 		
 		
 		btnCart.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
