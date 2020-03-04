@@ -388,7 +388,39 @@ public class CartUI extends JFrame {
 			}
 		});
 		
+/****************************** WHEN PEOPLE CLICK BUTTONS IN THE CATEGROIES DROP DOWN ************************************/
 		
+		catBooks.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				SearchScreen frame = new SearchScreen("book");
+				frame.openFrame("book");
+				
+			}
+		});
+		catMovies.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				SearchScreen frame = new SearchScreen("movie");
+				frame.openFrame("movie");			
+			}
+		});
+		catSchool.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				SearchScreen frame = new SearchScreen("school");
+				frame.openFrame("school");				
+			}
+		});
+		catShoes.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				SearchScreen frame = new SearchScreen("shoe");
+				frame.openFrame("shoe");				
+			}
+		});
+		
+	
+	
+	
+	
+	}	
 	}
 }
 
