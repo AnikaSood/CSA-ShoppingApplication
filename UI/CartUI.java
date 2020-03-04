@@ -232,11 +232,6 @@ public class CartUI extends JFrame {
 		pprod3lbl.setBounds(871, 452, 334, 16);
 		frame.getContentPane().add(pprod3lbl);
 		
-		JLabel label_3 = new JLabel("");
-		label_3.setOpaque(true);
-		label_3.setBounds(16, 157, 1230, 344);
-		frame.getContentPane().add(label_3);
-		
 		JLabel lblTotalPrice = new JLabel("Total: $");
 		lblTotalPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		lblTotalPrice.setBounds(1020, 520, 99, 44);
@@ -259,12 +254,12 @@ public class CartUI extends JFrame {
 		label_12.setOpaque(true);
 		label_12.setBounds(7, 92, 1320, 39);
 		frame.getContentPane().add(label_12);
-		
+		/*	
 		List<JLabel> prodName = new ArrayList<JLabel>(); 
 		List<JLabel> prodPrice = new ArrayList<JLabel>(); 
 		List<JLabel> prodImg = new ArrayList<JLabel>(); 
 		
-/*		
+		
 		for(int i = 0; i<InCart.inCart.size(); i++)
 		{
 			System.out.println(InCart.inCart.size());
@@ -299,6 +294,7 @@ public class CartUI extends JFrame {
 		
 		JButton remove1 = new JButton("Remove Item");
 		remove1.setOpaque(true);
+		remove1.setVisible(true);
 		remove1.setBackground(new Color(204, 51, 0));
 		remove1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		remove1.setBounds(53, 480, 334, 16);
@@ -308,12 +304,19 @@ public class CartUI extends JFrame {
 		JButton remove2 = new JButton("Remove Item");
 		remove2.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		remove2.setBounds(450, 480, 334, 16);
+		remove2.setVisible(true);
 		frame.getContentPane().add(remove2);
 		
 		JButton remove3 = new JButton("Remove Item");
 		remove3.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		remove3.setBounds(871, 480, 334, 16);
+		remove3.setVisible(true);
 		frame.getContentPane().add(remove3);
+		
+		JLabel label_3 = new JLabel("");
+		label_3.setOpaque(true);
+		label_3.setBounds(16, 157, 1230, 344);
+		frame.getContentPane().add(label_3);
 		
 				
 		
@@ -410,16 +413,35 @@ public class CartUI extends JFrame {
 		});
 		
 /****************************** Displaying items in the cart ************************************/
+
+		JLabel[] imageArr = {img1, img2, img3};
+		JLabel[] prodNameArr = {prod1lbl, prod2lbl, prod3lbl};
+		JLabel[] prodPriceArr = {pprod1lbl, pprod2lbl, pprod3lbl};
+
+		
 		List<Product> myCart = new ArrayList<Product>(); 
 		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
 		
-		int trackProd = 0;
+		int i = 0;
 		int start = 0; //when next is clicked, start will be 3 & end will be 6 (this will continue when the next is clicked again)
+		int totalItems = myCart.size();
 		int end = 3;
-		//IN GROUPS OF 3
 		
-		for (trackProd = start; trackProd < end; trackProd ++)
+		
+		//FIRST THREE ITEMS OF CART
+		for (i = start; i < end; i ++)
 		{
+			//display images
+			myCart.get(i).getImage();
+			java.awt.Image toSet = new ImageIcon(myCart.get(i).getImage()).getImage();
+			imageArr[i].setIcon(new ImageIcon(toSet));
+			
+			//display product name
+			prodNameArr[i].setText(myCart.get(i).getName());
+			
+			//display price
+			prodPriceArr[i].setText("$"+myCart.get(i).getPrice());
+
 			
 		}
 		
