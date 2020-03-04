@@ -262,7 +262,7 @@ public class StartingScreenUI extends JFrame {
 		p4NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
 		p4NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p4NAMEbtn.setBorderPainted(false);
-		p4NAMEbtn.setBounds(-12, 642, 213, 29);
+		p4NAMEbtn.setBounds(-12, 642, 362, 29);
 		frame.getContentPane().add(p4NAMEbtn);
 		
 		JLabel p4PRICElbl = new JLabel("$");
@@ -294,7 +294,7 @@ public class StartingScreenUI extends JFrame {
 		p6NAMEbtn.setHorizontalAlignment(SwingConstants.LEFT);
 		p6NAMEbtn.setFont(new Font("Lucida Grande", Font.PLAIN, 19));
 		p6NAMEbtn.setBorderPainted(false);
-		p6NAMEbtn.setBounds(827, 642, 213, 29);
+		p6NAMEbtn.setBounds(827, 642, 368, 29);
 		frame.getContentPane().add(p6NAMEbtn);
 		
 		JLabel p6PRICElbl = new JLabel("$");
