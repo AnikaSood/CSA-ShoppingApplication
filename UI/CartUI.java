@@ -80,6 +80,7 @@ public class CartUI extends JFrame {
 	private	int p1Disp; //tracks what # on the cart list to start current batch of 3 at
 	private int remDisp; //remaining items to display
 	private int p3Disp; 
+	private int totalTimes2ClickNext;
 	
 	//GUI Elements
 	private JLabel[] imgArr = new JLabel[3];
@@ -223,6 +224,7 @@ public class CartUI extends JFrame {
 		frame.getContentPane().add(lblYourCart);
 		
 		btnNext = new JButton(">");
+		
 		btnNext.setBounds(1217, 278, 25, 29);
 		frame.getContentPane().add(btnNext);
 		
@@ -464,10 +466,10 @@ public class CartUI extends JFrame {
 		 * when next clicked : display next 3 items
 		 */
 		
-		
+
 		
 	
-		//GUI elements array
+		//ARRAY INITIALIZATION
 		 JLabel[] imgs = {img1, img2, img3};
 		 JLabel[] names = {prod1lbl, prod2lbl, prod3lbl};
 		 JLabel[] prices = {pprod1lbl, pprod2lbl, pprod3lbl};
@@ -481,7 +483,26 @@ public class CartUI extends JFrame {
 			 remArr[x] = removes[x];
 		 }
 		
-		firstThree();
+		firstThree(); //EVERY TIME THE SCREEN IS OPENED IT WILL CALL THIS 
+		
+		
+		
+		/********* next button is clicked *********/
+		btnNext.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				p1Disp += 3;
+				p3Disp += 3;
+				
+				remDisp = totalItems - p3Disp; //total - last element currently being displayed
+				
+				if (remDisp <=3)
+				{
+					btnNext.setVisible(false);
+				}
+				
+				dispThree();
+			}
+		});
 	}
 	
 	private void firstThree() //Display first three elements of the list 
@@ -493,6 +514,9 @@ public class CartUI extends JFrame {
 		totalItems = myCart.size();
 		p3Disp = 3; 
 		
+		totalTimes2ClickNext = totalItems/3; 
+		if (totalTimes2ClickNext % 3 == 0)
+			totalTimes2ClickNext -=1;
 
 
 		if (totalItems <=3)
@@ -529,7 +553,32 @@ public class CartUI extends JFrame {
 
 	}
 	
+	public void dispThree()
+	{
+		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
+
+		for (int i = p1Disp; i < p3Disp; i ++)
+		{
+			for (int x = 0; x <3 ; x++)
+			{
+				//display images
+				java.awt.Image imgToSet = new ImageIcon(myCart.get(i).getImage()).getImage();
+				imgArr[x].setIcon(new ImageIcon(imgToSet));
+				
+				//display product name
+				nameArr[x].setText(myCart.get(i).getName());
+				
+				//display price
+				priceArr[x].setText("$"+myCart.get(i).getPrice());
+
+				remArr[x].setVisible(true);
+				
+			}
+			
+		}
 	
+		
+	}
 	
 	
 	
