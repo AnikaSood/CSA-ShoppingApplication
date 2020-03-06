@@ -27,12 +27,27 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class CartUI extends JFrame {
-
+	
+	private static final long serialVersionUID = 1L;
+	private JFrame frame;
+	
+	/********** OPEN FRAME METHOD ***********/	
+	public static void openFrame() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CartUI window = new CartUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 	/**
 	 * Instance Variables 
 	 */
-	private static final long serialVersionUID = 1L;
-	private JFrame frame;
+	
 	
 	private JLabel lblTotalPrice;
 	
@@ -66,12 +81,11 @@ public class CartUI extends JFrame {
 	private int remDisp; //remaining items to display
 	private int p3Disp; 
 	
-	//GUI elements array
-	/*private JLabel[] imageArr;
-	private JLabel[] prodNameArr;
-	private JLabel[] prodPriceArr;
-	private JButton[] removeBtnArr;
-	*/
+	//GUI Elements
+	private JLabel[] imgArr = new JLabel[3];
+	private JLabel[] nameArr = new JLabel[3];
+	private JLabel[] priceArr = new JLabel[3];
+	private JButton[] remArr = new JButton[3];
 	
 	//The cart
 	private List<Product> myCart = new ArrayList<Product>(); 
@@ -317,7 +331,14 @@ public class CartUI extends JFrame {
 		frame.getContentPane().add(label_3);
 		
 				
-		
+/*******************HOME BUTTON CLICKED************************/
+		homeButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				StartingScreenUI frame = new StartingScreenUI();
+				frame.openFrame();
+				
+			}
+		});
 /******************************** HOVERING OVER CATEGORIES DROP DOWN ******************************/
 		btnCategories_1.addMouseListener(new MouseAdapter() {
 			@Override
@@ -443,25 +464,28 @@ public class CartUI extends JFrame {
 		 * when next clicked : display next 3 items
 		 */
 		
+		
+		
 	
+		//GUI elements array
+		 JLabel[] imgs = {img1, img2, img3};
+		 JLabel[] names = {prod1lbl, prod2lbl, prod3lbl};
+		 JLabel[] prices = {pprod1lbl, pprod2lbl, pprod3lbl};
+		 JButton[] removes = {remove1, remove2, remove3};
+		 
+		 for (int x= 0; x<3; x++)
+		 {
+			 imgArr[x] = imgs[x];
+			 nameArr[x] = names[x];
+			 priceArr[x] = prices[x];
+			 remArr[x] = removes[x];
+		 }
 		
 		firstThree();
-		
+	}
 	
-	
-	
-	}	
-
-	
-	
-	
-	private void firstThree()
+	private void firstThree() //Display first three elements of the list 
 	{
-		JLabel[] imageArr = {img1, img2, img3};
-		JLabel[] prodNameArr = {prod1lbl, prod2lbl, prod3lbl};
-		JLabel[] prodPriceArr = {pprod1lbl, pprod2lbl, pprod3lbl};
-		JButton[] removeBtnArr = {remove1, remove2, remove3};
-		
 		
 		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
 		
@@ -490,17 +514,18 @@ public class CartUI extends JFrame {
 		{
 			//display images
 			java.awt.Image imgToSet = new ImageIcon(myCart.get(i).getImage()).getImage();
-			imageArr[i].setIcon(new ImageIcon(imgToSet));
+			imgArr[i].setIcon(new ImageIcon(imgToSet));
 			
 			//display product name
-			prodNameArr[i].setText(myCart.get(i).getName());
+			nameArr[i].setText(myCart.get(i).getName());
 			
 			//display price
-			prodPriceArr[i].setText("$"+myCart.get(i).getPrice());
+			priceArr[i].setText("$"+myCart.get(i).getPrice());
 
-			removeBtnArr[i].setVisible(true);
+			remArr[i].setVisible(true);
 		}
-		
+	
+
 
 	}
 	
@@ -509,19 +534,7 @@ public class CartUI extends JFrame {
 	
 	
 	
-/********** OPEN FRAME METHOD ***********/	
-	public static void openFrame() {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					CartUI window = new CartUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+
 }
 
 
