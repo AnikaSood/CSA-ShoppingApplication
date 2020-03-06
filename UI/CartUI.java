@@ -80,7 +80,7 @@ public class CartUI extends JFrame {
 	private	int p1Disp; //tracks what # on the cart list to start current batch of 3 at
 	private int remDisp; //remaining items to display
 	private int p3Disp; 
-	private int totalTimes2ClickNext;
+	private int remNext; //tracks how many times they user can click "next"
 	
 	//GUI Elements
 	private JLabel[] imgArr = new JLabel[3];
@@ -490,15 +490,18 @@ public class CartUI extends JFrame {
 		/********* next button is clicked *********/
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				p1Disp += 3;
-				p3Disp += 3;
 				
-				remDisp = totalItems - p3Disp; //total - last element currently being displayed
 				
-				if (remDisp <=3)
+				remDisp = totalItems-3; //accounting for 3 before, this is the remainder to be displayed on this [age 
+				
+				if (remDisp<=3) //3 or less items to be displayed at this moment
 				{
 					btnNext.setVisible(false);
+					p1Disp += 3;
+					p3Disp = totalItems;
 				}
+				else
+					p3Disp += 3;
 				
 				dispThree();
 			}
@@ -510,13 +513,15 @@ public class CartUI extends JFrame {
 		
 		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
 		
-		p1Disp = 0; //element 0 of the arrayList
+		p1Disp = 0; 
+		
 		totalItems = myCart.size();
 		p3Disp = 3; 
 		
-		totalTimes2ClickNext = totalItems/3; 
-		if (totalTimes2ClickNext % 3 == 0)
-			totalTimes2ClickNext -=1;
+		
+		remNext = totalItems/3; 
+		if (remNext % 3 == 0)
+			remNext -=1;
 
 
 		if (totalItems <=3)
@@ -534,21 +539,7 @@ public class CartUI extends JFrame {
 		
 
 		
-		for (int i = p1Disp; i < p3Disp; i ++)
-		{
-			//display images
-			java.awt.Image imgToSet = new ImageIcon(myCart.get(i).getImage()).getImage();
-			imgArr[i].setIcon(new ImageIcon(imgToSet));
-			
-			//display product name
-			nameArr[i].setText(myCart.get(i).getName());
-			
-			//display price
-			priceArr[i].setText("$"+myCart.get(i).getPrice());
-
-			remArr[i].setVisible(true);
-		}
-	
+		dispThree();
 
 
 	}
@@ -556,11 +547,19 @@ public class CartUI extends JFrame {
 	public void dispThree()
 	{
 		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
-
+		
+		int end;
+		if (totalItems<3)
+		{
+			end = totalItems-p1Disp;
+		}
+		else 
+			end=3;
+		
+		int x = 0; 
 		for (int i = p1Disp; i < p3Disp; i ++)
 		{
-			for (int x = 0; x <3 ; x++)
-			{
+			
 				//display images
 				java.awt.Image imgToSet = new ImageIcon(myCart.get(i).getImage()).getImage();
 				imgArr[x].setIcon(new ImageIcon(imgToSet));
@@ -572,8 +571,7 @@ public class CartUI extends JFrame {
 				priceArr[x].setText("$"+myCart.get(i).getPrice());
 
 				remArr[x].setVisible(true);
-				
-			}
+			x++;
 			
 		}
 	
