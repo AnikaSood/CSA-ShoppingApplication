@@ -29,7 +29,7 @@ import java.awt.event.ActionEvent;
 public class CartUI extends JFrame {
 
 	/**
-	 * 1223, 712
+	 * Instance Variables 
 	 */
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
@@ -39,7 +39,23 @@ public class CartUI extends JFrame {
 	//Product 1 
 	private JLabel prod1lbl; 
 	private JLabel pprod1lbl;
+	private JButton remove1;
 	
+	//Product 2
+	private JLabel prod2lbl;
+	private JLabel pprod2lbl;
+	private JButton remove2;
+	
+	//Product 3
+	private JLabel prod3lbl;
+	private JLabel pprod3lbl;
+	private JButton remove3;
+
+	
+	
+	
+	
+/************ CART UI CONSTRUCTOR ***************/	
 	public CartUI() {
 		
 
@@ -233,39 +249,39 @@ public class CartUI extends JFrame {
 		pprod1lbl.setBounds(53, 452, 334, 16);
 		frame.getContentPane().add(pprod1lbl);
 		
-		JLabel prod2lbl = new JLabel("");
+		prod2lbl = new JLabel("");
 		prod2lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		prod2lbl.setBounds(450, 411, 334, 44);
 		frame.getContentPane().add(prod2lbl);
 		
-		JLabel pprod2lbl = new JLabel("");
+		pprod2lbl = new JLabel("");
 		pprod2lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		pprod2lbl.setBounds(450, 452, 334, 16);
 		frame.getContentPane().add(pprod2lbl);
 		
-		JLabel prod3lbl = new JLabel("");
+		prod3lbl = new JLabel("");
 		prod3lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		prod3lbl.setBounds(871, 411, 334, 44);
 		frame.getContentPane().add(prod3lbl);
 		
-		JLabel pprod3lbl = new JLabel("");
+		pprod3lbl = new JLabel("");
 		pprod3lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		pprod3lbl.setBounds(871, 452, 334, 16);
 		frame.getContentPane().add(pprod3lbl);
 		
-		JButton remove3 = new JButton("Remove Item");
+		remove3 = new JButton("Remove Item");
 		remove3.setVisible(false);
 		remove3.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		remove3.setBounds(868, 480, 334, 16);
 		frame.getContentPane().add(remove3);
 		
-		JButton remove2 = new JButton("Remove Item");
+		remove2 = new JButton("Remove Item");
 		remove2.setVisible(false);
 		remove2.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		remove2.setBounds(448, 480, 334, 16);
 		frame.getContentPane().add(remove2);
 		
-		JButton remove1 = new JButton("Remove Item");
+		remove1 = new JButton("Remove Item");
 		remove1.setOpaque(true);
 		remove1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
 		remove1.setBackground(new Color(204, 51, 0));
@@ -279,7 +295,7 @@ public class CartUI extends JFrame {
 		
 				
 		
-		//CATEGORIES HOVER
+/******************************** HOVERING OVER CATEGORIES DROP DOWN ******************************/
 		btnCategories_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -291,7 +307,6 @@ public class CartUI extends JFrame {
 			}
 		});
 		
-		//BOOKS HOVER
 		catBooks.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -343,7 +358,7 @@ public class CartUI extends JFrame {
 			}
 		});
 		
-/****************************** WHEN PEOPLE CLICK BUTTONS IN THE CATEGROIES DROP DOWN ************************************/
+/****************************** BUTTON CLICKED IN THE CATEGROIES DROP DOWN ************************************/
 		
 		catBooks.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -373,6 +388,18 @@ public class CartUI extends JFrame {
 		
 /****************************** Displaying items in the cart ************************************/
 
+		/*
+		 * upon opening, display the initial items in the cart.
+		 * 
+		 * when item is removed, re-display the first three items. 
+		 * 
+		 * check if there are more than 3 items in cart
+		 * 	if yes display initial items and provide the next
+		 * 	
+		 * when back is clicked : display previous 3 items
+		 * when next clicked : display next 3 items
+		 */
+		
 		JLabel[] imageArr = {img1, img2, img3};
 		JLabel[] prodNameArr = {prod1lbl, prod2lbl, prod3lbl};
 		JLabel[] prodPriceArr = {pprod1lbl, pprod2lbl, pprod3lbl};
