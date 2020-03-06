@@ -237,6 +237,8 @@ public class CartUI extends JFrame {
 		total.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		total.setBounds(1138, 520, 120, 44);
 		frame.getContentPane().add(total);
+		Cart cartPrice = new Cart();
+		total.setText(String.valueOf(cartPrice.calcPrice(Cart.cart)));
 		
 		
 		JButton btnNewButton_1 = new JButton("Pay Now");
