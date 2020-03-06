@@ -198,9 +198,9 @@ public class CartUI extends JFrame {
 		btnBack.setBounds(23, 278, 25, 29);
 		frame.getContentPane().add(btnBack);
 		
-		JButton nextBTN = new JButton(">");
-		nextBTN.setBounds(1217, 278, 25, 29);
-		frame.getContentPane().add(nextBTN);
+		JButton btnNext = new JButton(">");
+		btnNext.setBounds(1217, 278, 25, 29);
+		frame.getContentPane().add(btnNext);
 		
 		JLabel prod1lbl = new JLabel("");
 		prod1lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
@@ -297,6 +297,7 @@ public class CartUI extends JFrame {
 		} */
 		
 		JButton remove1 = new JButton("Remove Item");
+		
 		remove1.setOpaque(true);
 		remove1.setVisible(false);
 		remove1.setBackground(new Color(204, 51, 0));
@@ -418,6 +419,28 @@ public class CartUI extends JFrame {
 		
 /****************************** Displaying items in the cart ************************************/
 
+		
+		
+/****************************** remove item from cart ************************************/
+	
+		remove1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Cart.removeFromList(prod1lbl.getText()); //remove from the list
+				
+				
+				
+			}
+		});	
+
+	
+	
+	
+	}
+	
+	
+	private void displayItems()
+	{
 		JLabel[] imageArr = {img1, img2, img3};
 		JLabel[] prodNameArr = {prod1lbl, prod2lbl, prod3lbl};
 		JLabel[] prodPriceArr = {pprod1lbl, pprod2lbl, pprod3lbl};
@@ -435,6 +458,9 @@ public class CartUI extends JFrame {
 
 		if (totalItems <=3)
 		{
+			btnBack.setVisible(false);
+			btnNext.setVisible(false);
+			
 			end = totalItems;
 			//FIRST THREE ITEMS OF CART
 			for (i = start; i < end; i ++)
@@ -457,16 +483,10 @@ public class CartUI extends JFrame {
 		else
 		{
 			btnBack.setVisible(true);
+			btnNext.setVisible(true);
 		}
 		
-		
-		
-		
-
-	
-	
-	
-	}	
+	}
 }
 
 
