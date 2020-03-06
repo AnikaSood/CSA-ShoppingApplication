@@ -34,18 +34,12 @@ public class CartUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
 	
-	public static void openFrame() {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					CartUI window = new CartUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private JLabel lblTotalPrice;
+	
+	//Product 1 
+	private JLabel prod1lbl; 
+	private JLabel pprod1lbl;
+	
 	public CartUI() {
 		
 
@@ -180,7 +174,7 @@ public class CartUI extends JFrame {
 		btnNext.setBounds(1217, 278, 25, 29);
 		frame.getContentPane().add(btnNext);
 		
-		JLabel lblTotalPrice = new JLabel("Total: $");
+		lblTotalPrice = new JLabel("Total: $");
 		lblTotalPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		lblTotalPrice.setBounds(1045, 520, 99, 44);
 		frame.getContentPane().add(lblTotalPrice);
@@ -229,12 +223,12 @@ public class CartUI extends JFrame {
 		img1.setBounds(50, 170, 334, 238);
 		frame.getContentPane().add(img1);
 		
-		JLabel prod1lbl = new JLabel("");
+		prod1lbl = new JLabel("");
 		prod1lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		prod1lbl.setBounds(53, 411, 334, 44);
 		frame.getContentPane().add(prod1lbl);
 		
-		JLabel pprod1lbl = new JLabel("");
+		pprod1lbl = new JLabel("");
 		pprod1lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 13));
 		pprod1lbl.setBounds(53, 452, 334, 16);
 		frame.getContentPane().add(pprod1lbl);
@@ -428,6 +422,19 @@ public class CartUI extends JFrame {
 	
 	
 	}	
+	
+	public static void openFrame() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CartUI window = new CartUI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 }
 
 
