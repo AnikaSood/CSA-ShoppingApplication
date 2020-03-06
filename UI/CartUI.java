@@ -80,7 +80,6 @@ public class CartUI extends JFrame {
 	private	int p1Disp; //tracks what # on the cart list to start current batch of 3 at
 	private int remDisp; //remaining items to display
 	private int p3Disp; 
-	private int remNext; //tracks how many times they user can click "next"
 	
 	//GUI Elements
 	private JLabel[] imgArr = new JLabel[3];
@@ -431,6 +430,14 @@ public class CartUI extends JFrame {
 			}
 		});
 		
+		btnSearch.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				SearchScreen frame = new SearchScreen(txtrSearchBar.getText());
+				frame.openFrame(txtrSearchBar.getText());
+			
+			}
+		});
 /****************************** Upon opening this screen ************************************/
 
 		/*
@@ -603,21 +610,31 @@ public class CartUI extends JFrame {
 	
 		
 
-/********************************************* back button is clicked *********************************************/
-	btnBack.addActionListener(new ActionListener() {
+/*	btnBack.addActionListener(new ActionListener() {
 		public void actionPerformed(ActionEvent e) {
 			
-			remDisp += (p1Disp-p3Disp);
+			
 			p1Disp -= 3; //subtract three from p1Disp
 			
+			if (p1Disp ==0)
+			{
+				firstThree();
+			}
 			if (p3Disp % 3 != 0)
 			{
+				remDisp += (p1Disp-p3Disp);
 				p3Disp = p3Disp - p3Disp % 3;
 				
 			}
 			else
+			{
+				remDisp -= 3;
 				p3Disp -= 3;
-			
+				
+
+			}
+			System.out.println("remDisp:  "+remDisp);
+
 			dispThree(p3Disp);
 			
 			
@@ -625,7 +642,7 @@ public class CartUI extends JFrame {
 	});
 	
 	
-	
+	*/
 	
 	
 	}
