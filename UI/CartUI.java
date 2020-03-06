@@ -389,12 +389,32 @@ public class CartUI extends JFrame {
 /****************************** Displaying items in the cart ************************************/
 
 		/*
-		 * upon opening, display the initial items in the cart.
+		 * variables necessary - counter for first item being displayed (p1disp), counter for total items (totalItems), counter for remaining to display(remDisp)
 		 * 
-		 * when item is removed, re-display the first three items. 
+		 * upon opening:
+		 * 	check if there are more than 3 items in cart
+		 * 		if yes display initial items and provide the next button
+		 * 		else just display the initial items
+		 *	
+		 * when next is clicked: 
+		 * 	check if there are still stuff remaining to disp
+		 * 		if no hide the next button
 		 * 
-		 * check if there are more than 3 items in cart
-		 * 	if yes display initial items and provide the next
+		 *  display the next three items
+		 *  add the back option
+		 *  
+		 * When back is clicked:
+		 * check if its the first three items in the cart being displayed
+		 * 	if yes, hide the back option
+		 * 
+		 * display the previous three items
+		 * 
+		 * When remove item is clicked:
+		 * 	remove that item from the cart list
+		 * 	display the first three items in the cart 
+		 * 	reset all counters so that its basically like they opened the cart again 
+		 * 
+		 * 
 		 * 	
 		 * when back is clicked : display previous 3 items
 		 * when next clicked : display next 3 items
