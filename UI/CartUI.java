@@ -543,12 +543,6 @@ public class CartUI extends JFrame {
 		p3Disp = 3; 
 		
 		
-		
-		/*remNext = totalItems/3; 
-		if (remNext % 3 == 0)
-			remNext -=1;
-
-*/
 		if (totalItems <=3)
 		{
 			btnBack.setVisible(false);
@@ -574,14 +568,7 @@ public class CartUI extends JFrame {
 	public void dispThree(int endNum)
 	{
 		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
-		/*
-		int end;
-		if (totalItems<3)
-		{
-			end = totalItems;
-		}
-		else 
-			end=endNum;*/
+		
 		
 		int x = 0; 
 		
