@@ -68,12 +68,6 @@ public class CartUI extends JFrame {
 		java.awt.Image image = new ImageIcon("ui/KPLogo.jpg").getImage();
 		java.awt.Image cart = new ImageIcon("ui/rsz_shopping_cart_large.png").getImage();
 		
-		JLabel img1 = new JLabel("");
-		img1.setOpaque(true);
-		img1.setBackground(SystemColor.window);
-		img1.setBounds(53, 172, 334, 238);
-		frame.getContentPane().add(img1);
-		
 		
 		JButton btnCart = new JButton("");
 		
@@ -179,24 +173,8 @@ public class CartUI extends JFrame {
 		JLabel lblYourCart = new JLabel("Your Cart");
 		lblYourCart.setBackground(Color.ORANGE);
 		lblYourCart.setFont(new Font("Lucida Grande", Font.PLAIN, 25));
-		lblYourCart.setBounds(16, 92, 193, 39);
+		lblYourCart.setBounds(29, 92, 193, 39);
 		frame.getContentPane().add(lblYourCart);
-		
-		JLabel img2 = new JLabel("");
-		img2.setOpaque(true);
-		img2.setBackground(SystemColor.window);
-		img2.setBounds(450, 172, 334, 238);
-		frame.getContentPane().add(img2);
-		
-		JLabel img3 = new JLabel("");
-		img3.setOpaque(true);
-		img3.setBackground(SystemColor.window);
-		img3.setBounds(871, 172, 334, 238);
-		frame.getContentPane().add(img3);
-		
-		JButton btnBack = new JButton("<");
-		btnBack.setBounds(23, 278, 25, 29);
-		frame.getContentPane().add(btnBack);
 		
 		JButton btnNext = new JButton(">");
 		btnNext.setBounds(1217, 278, 25, 29);
@@ -256,7 +234,7 @@ public class CartUI extends JFrame {
 		
 		JLabel label_12 = new JLabel("");
 		label_12.setOpaque(true);
-		label_12.setBounds(7, 92, 1320, 39);
+		label_12.setBounds(16, 92, 1242, 39);
 		frame.getContentPane().add(label_12);
 		/*	
 		List<JLabel> prodName = new ArrayList<JLabel>(); 
@@ -318,9 +296,31 @@ public class CartUI extends JFrame {
 		remove3.setVisible(false);
 		frame.getContentPane().add(remove3);
 		
+		JButton btnBack = new JButton("<");
+		btnBack.setBounds(24, 278, 25, 29);
+		frame.getContentPane().add(btnBack);
+		
+		JLabel img3 = new JLabel("");
+		img3.setOpaque(true);
+		img3.setBackground(SystemColor.window);
+		img3.setBounds(868, 170, 334, 238);
+		frame.getContentPane().add(img3);
+		
+		JLabel img2 = new JLabel("");
+		img2.setOpaque(true);
+		img2.setBackground(SystemColor.window);
+		img2.setBounds(448, 173, 334, 238);
+		frame.getContentPane().add(img2);
+		
+		JLabel img1 = new JLabel("");
+		img1.setOpaque(true);
+		img1.setBackground(SystemColor.window);
+		img1.setBounds(50, 170, 334, 238);
+		frame.getContentPane().add(img1);
+		
 		JLabel label_3 = new JLabel("");
 		label_3.setOpaque(true);
-		label_3.setBounds(16, 157, 1230, 344);
+		label_3.setBounds(16, 157, 1242, 344);
 		frame.getContentPane().add(label_3);
 		
 				
