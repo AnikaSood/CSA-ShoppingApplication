@@ -1,5 +1,6 @@
 movies
-fantasyg
+fantasy
+g
 6.99
 1 h 25 m
 the little mermaid

@@ -54,7 +54,7 @@ public class Movies extends Product{
 	}
 	public String makeDescription()
 	{
-		String description = getProduct() + "\n" + getGenre() + getRating() 
+		String description = getProduct() + "\n" + getGenre() + "\n" + getRating() 
 		+ "\n" + getPrice() + "\n" + getLength() + "\n" + toString() + "\n"
 		 + getDate() + "\n" + getReview();
 		return description; 
