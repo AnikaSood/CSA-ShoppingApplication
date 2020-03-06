@@ -490,6 +490,8 @@ public class CartUI extends JFrame {
 				myCart = Cart.cart;
 				totalItems = myCart.size();
 
+				btnBack.setVisible(true);
+
 				
 				//Reset all to invisible
 				for (int x = 0; x <3; x++)
@@ -556,7 +558,6 @@ public class CartUI extends JFrame {
 		else
 		{
 			//remDisp = totalItems -3;
-			btnBack.setVisible(true);
 			btnNext.setVisible(true);
 		}
 		
@@ -599,12 +600,33 @@ public class CartUI extends JFrame {
 		}
 	
 		
-	}
-	
-	
-	
-	
 
+/********************************************* back button is clicked *********************************************/
+	btnBack.addActionListener(new ActionListener() {
+		public void actionPerformed(ActionEvent e) {
+			
+			remDisp += (p1Disp-p3Disp);
+			p1Disp -= 3; //subtract three from p1Disp
+			
+			if (p3Disp % 3 != 0)
+			{
+				p3Disp = p3Disp - p3Disp % 3;
+				
+			}
+			else
+				p3Disp -= 3;
+			
+			dispThree(p3Disp);
+			
+			
+		}
+	});
+	
+	
+	
+	
+	
+	}
 }
 
 
