@@ -484,7 +484,7 @@ public class CartUI extends JFrame {
 		firstThree(); //EVERY TIME THE SCREEN IS OPENED IT WILL CALL THIS 
 		
 		
-		/********* next button is clicked *********/
+/********************************************* next button is clicked *********************************************/
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				myCart = Cart.cart;
@@ -529,6 +529,8 @@ public class CartUI extends JFrame {
 		});
 	}
 	
+	
+/********************************************* FIRST THREE METHOD *********************************************/
 	private void firstThree() //Display first three elements of the list 
 	{
 		
@@ -564,6 +566,9 @@ public class CartUI extends JFrame {
 
 
 	}
+	
+	
+/********************************************* DISP THREE METHOD *********************************************/
 	
 	public void dispThree(int endNum)
 	{
