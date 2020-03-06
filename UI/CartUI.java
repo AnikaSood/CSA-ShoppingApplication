@@ -180,6 +180,55 @@ public class CartUI extends JFrame {
 		btnNext.setBounds(1217, 278, 25, 29);
 		frame.getContentPane().add(btnNext);
 		
+		JLabel lblTotalPrice = new JLabel("Total: $");
+		lblTotalPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		lblTotalPrice.setBounds(1045, 520, 99, 44);
+		frame.getContentPane().add(lblTotalPrice);
+		
+		JLabel total = new JLabel();
+		total.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
+		total.setBounds(1138, 520, 120, 44);
+		frame.getContentPane().add(total);
+		
+		Cart c = new Cart();
+		
+		total.setText(String.valueOf(c.calcPrice(InCart.inCart)));
+		
+		JButton btnNewButton_1 = new JButton("Pay Now");
+		btnNewButton_1.setFont(new Font("Lucida Grande", Font.PLAIN, 25));
+		btnNewButton_1.setBackground(Color.ORANGE);
+		btnNewButton_1.setOpaque(true);
+		btnNewButton_1.setBorderPainted(false);
+		btnNewButton_1.setBounds(1048, 576, 210, 29);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JLabel label_12 = new JLabel("");
+		label_12.setOpaque(true);
+		label_12.setBounds(16, 92, 1242, 39);
+		frame.getContentPane().add(label_12);
+		
+		JButton btnBack = new JButton("<");
+		btnBack.setBounds(24, 278, 25, 29);
+		frame.getContentPane().add(btnBack);
+		
+		JLabel img3 = new JLabel("");
+		img3.setOpaque(true);
+		img3.setBackground(SystemColor.window);
+		img3.setBounds(868, 170, 334, 238);
+		frame.getContentPane().add(img3);
+		
+		JLabel img2 = new JLabel("");
+		img2.setOpaque(true);
+		img2.setBackground(SystemColor.window);
+		img2.setBounds(448, 173, 334, 238);
+		frame.getContentPane().add(img2);
+		
+		JLabel img1 = new JLabel("");
+		img1.setOpaque(true);
+		img1.setBackground(SystemColor.window);
+		img1.setBounds(50, 170, 334, 238);
+		frame.getContentPane().add(img1);
+		
 		JLabel prod1lbl = new JLabel("");
 		prod1lbl.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
 		prod1lbl.setBounds(53, 411, 334, 44);
@@ -210,113 +259,24 @@ public class CartUI extends JFrame {
 		pprod3lbl.setBounds(871, 452, 334, 16);
 		frame.getContentPane().add(pprod3lbl);
 		
-		JLabel lblTotalPrice = new JLabel("Total: $");
-		lblTotalPrice.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		lblTotalPrice.setBounds(1020, 520, 99, 44);
-		frame.getContentPane().add(lblTotalPrice);
-		
-		JLabel total = new JLabel();
-		total.setFont(new Font("Lucida Grande", Font.PLAIN, 24));
-		total.setBounds(1111, 520, 127, 44);
-		frame.getContentPane().add(total);
-		
-		Cart c = new Cart();
-		
-		total.setText(String.valueOf(c.calcPrice(InCart.inCart)));
-		
-		JButton btnNewButton_1 = new JButton("Pay Now");
-		btnNewButton_1.setFont(new Font("Lucida Grande", Font.PLAIN, 25));
-		btnNewButton_1.setBackground(Color.ORANGE);
-		btnNewButton_1.setOpaque(true);
-		btnNewButton_1.setBorderPainted(false);
-		btnNewButton_1.setBounds(1036, 576, 210, 29);
-		frame.getContentPane().add(btnNewButton_1);
-		
-		JLabel label_12 = new JLabel("");
-		label_12.setOpaque(true);
-		label_12.setBounds(16, 92, 1242, 39);
-		frame.getContentPane().add(label_12);
-		/*	
-		List<JLabel> prodName = new ArrayList<JLabel>(); 
-		List<JLabel> prodPrice = new ArrayList<JLabel>(); 
-		List<JLabel> prodImg = new ArrayList<JLabel>(); 
-		
-		
-		for(int i = 0; i<InCart.inCart.size(); i++)
-		{
-			System.out.println(InCart.inCart.size());
-			images.add(new ImageIcon(InCart.inCart.get(i).getImage()).getImage());
-
-		}
-		
-		prodName.add(lblProdName);
-		prodPrice.add(lblPrice);
-	
-		for(int i = 0; i<images.size(); i++)
-		{
-			prodImg.get(i).setIcon(new ImageIcon(images.get(i)));
-			
-		}
-		
-		for(int i =0; i<prodName.size(); i++) {
-			
-			prodImg.get(i).setVisible(false);//(Color.WHITE); //set image
-			prodName.get(i).setText(""); //set product name
-			prodPrice.get(i).setText("");					
-		}
-
-	
-		
-		for(int i =0; i <prodName.size(); i++)
-		{
-			prodImg.get(i).setVisible(true);
-			prodName.get(i).setText(InCart.inCart.get(i).getName());
-			prodPrice.get(i).setText("$" + InCart.inCart.get(i).getPrice());
-		} */
-		
-		JButton remove1 = new JButton("Remove Item");
-		
-		remove1.setOpaque(true);
-		remove1.setVisible(false);
-		remove1.setBackground(new Color(204, 51, 0));
-		remove1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		remove1.setBounds(53, 480, 334, 16);
-		frame.getContentPane().add(remove1);
-		
-	
-		JButton remove2 = new JButton("Remove Item");
-		remove2.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		remove2.setBounds(450, 480, 334, 16);
-		remove2.setVisible(false);
-		frame.getContentPane().add(remove2);
-		
 		JButton remove3 = new JButton("Remove Item");
-		remove3.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		remove3.setBounds(871, 480, 334, 16);
 		remove3.setVisible(false);
+		remove3.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
+		remove3.setBounds(868, 480, 334, 16);
 		frame.getContentPane().add(remove3);
 		
-		JButton btnBack = new JButton("<");
-		btnBack.setBounds(24, 278, 25, 29);
-		frame.getContentPane().add(btnBack);
+		JButton remove2 = new JButton("Remove Item");
+		remove2.setVisible(false);
+		remove2.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
+		remove2.setBounds(448, 480, 334, 16);
+		frame.getContentPane().add(remove2);
 		
-		JLabel img3 = new JLabel("");
-		img3.setOpaque(true);
-		img3.setBackground(SystemColor.window);
-		img3.setBounds(868, 170, 334, 238);
-		frame.getContentPane().add(img3);
-		
-		JLabel img2 = new JLabel("");
-		img2.setOpaque(true);
-		img2.setBackground(SystemColor.window);
-		img2.setBounds(448, 173, 334, 238);
-		frame.getContentPane().add(img2);
-		
-		JLabel img1 = new JLabel("");
-		img1.setOpaque(true);
-		img1.setBackground(SystemColor.window);
-		img1.setBounds(50, 170, 334, 238);
-		frame.getContentPane().add(img1);
+		JButton remove1 = new JButton("Remove Item");
+		remove1.setOpaque(true);
+		remove1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
+		remove1.setBackground(new Color(204, 51, 0));
+		remove1.setBounds(50, 480, 334, 16);
+		frame.getContentPane().add(remove1);
 		
 		JLabel label_3 = new JLabel("");
 		label_3.setOpaque(true);
@@ -463,19 +423,6 @@ public class CartUI extends JFrame {
 			btnBack.setVisible(true);
 			btnNext.setVisible(true);
 		}
-		
-		
-/****************************** remove item from cart ************************************/
-	
-		remove1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				Cart.removeFromList(prod1lbl.getText()); //remove from the list
-				
-				
-				
-			}
-		});	
 
 	
 	
