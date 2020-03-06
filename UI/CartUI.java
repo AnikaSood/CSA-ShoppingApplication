@@ -419,28 +419,6 @@ public class CartUI extends JFrame {
 		
 /****************************** Displaying items in the cart ************************************/
 
-		
-		
-/****************************** remove item from cart ************************************/
-	
-		remove1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				Cart.removeFromList(prod1lbl.getText()); //remove from the list
-				
-				
-				
-			}
-		});	
-
-	
-	
-	
-	}
-	
-	
-	private void displayItems()
-	{
 		JLabel[] imageArr = {img1, img2, img3};
 		JLabel[] prodNameArr = {prod1lbl, prod2lbl, prod3lbl};
 		JLabel[] prodPriceArr = {pprod1lbl, pprod2lbl, pprod3lbl};
@@ -486,7 +464,23 @@ public class CartUI extends JFrame {
 			btnNext.setVisible(true);
 		}
 		
-	}
+		
+/****************************** remove item from cart ************************************/
+	
+		remove1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Cart.removeFromList(prod1lbl.getText()); //remove from the list
+				
+				
+				
+			}
+		});	
+
+	
+	
+	
+	}	
 }
 
 
