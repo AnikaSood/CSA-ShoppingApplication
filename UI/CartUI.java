@@ -480,13 +480,17 @@ public class CartUI extends JFrame {
 			 remArr[x] = removes[x];
 		 }
 		
-		firstThree(); //EVERY TIME THE SCREEN IS OPENED IT WILL CALL THIS 
 		
+		firstThree(); //EVERY TIME THE SCREEN IS OPENED IT WILL CALL THIS 
 		
 		
 		/********* next button is clicked *********/
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				myCart = Cart.cart;
+				totalItems = myCart.size();
+
+				
 				//Reset all to invisible
 				for (int x = 0; x <3; x++)
 				{
@@ -503,17 +507,21 @@ public class CartUI extends JFrame {
 				
 				
 				
-				remDisp = totalItems-3; //accounting for 3 before, this is the remainder to be displayed on this [age 
+				remDisp -= 3; //accounting for 3 before, this is the remainder to be displayed on this [age 
 				p1Disp += 3;
+				
+				System.out.println(""+remDisp);
 
-				if (remDisp<=3) //3 or less items to be displayed at this moment
+				if(remDisp <= 3) //three or less items need to be displayed
 				{
 					btnNext.setVisible(false);
-					p3Disp = totalItems;
+					p3Disp += remDisp;
+						
 				}
 				else
 				{
 					p3Disp += 3;
+					System.out.println("p3 plus 3");
 				}
 				
 				dispThree(p3Disp);
@@ -529,23 +537,29 @@ public class CartUI extends JFrame {
 		p1Disp = 0; 
 		
 		totalItems = myCart.size();
+		
+		remDisp = totalItems;
+
 		p3Disp = 3; 
 		
 		
-		remNext = totalItems/3; 
+		
+		/*remNext = totalItems/3; 
 		if (remNext % 3 == 0)
 			remNext -=1;
 
-
+*/
 		if (totalItems <=3)
 		{
 			btnBack.setVisible(false);
 			btnNext.setVisible(false);
 			p3Disp = totalItems;
 			
+			
 		}
 		else
 		{
+			//remDisp = totalItems -3;
 			btnBack.setVisible(true);
 			btnNext.setVisible(true);
 		}
