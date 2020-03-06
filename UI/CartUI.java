@@ -50,9 +50,31 @@ public class CartUI extends JFrame {
 	private JLabel prod3lbl;
 	private JLabel pprod3lbl;
 	private JButton remove3;
-
 	
+	//Back & Next buttons
+	private JButton btnNext;
+	private JButton btnBack;
 	
+	//Image labels
+	private JLabel img1;
+	private JLabel img2;
+	private JLabel img3;
+	
+	//tracking variables
+	private int totalItems; //track total # of items in the cart
+	private	int p1Disp; //tracks what # on the cart list to start current batch of 3 at
+	private int remDisp; //remaining items to display
+	private int p3Disp; 
+	
+	//GUI elements array
+	/*private JLabel[] imageArr;
+	private JLabel[] prodNameArr;
+	private JLabel[] prodPriceArr;
+	private JButton[] removeBtnArr;
+	*/
+	
+	//The cart
+	private List<Product> myCart = new ArrayList<Product>(); 
 	
 	
 /************ CART UI CONSTRUCTOR ***************/	
@@ -186,7 +208,7 @@ public class CartUI extends JFrame {
 		lblYourCart.setBounds(29, 92, 193, 39);
 		frame.getContentPane().add(lblYourCart);
 		
-		JButton btnNext = new JButton(">");
+		btnNext = new JButton(">");
 		btnNext.setBounds(1217, 278, 25, 29);
 		frame.getContentPane().add(btnNext);
 		
@@ -217,11 +239,11 @@ public class CartUI extends JFrame {
 		label_12.setBounds(16, 92, 1242, 39);
 		frame.getContentPane().add(label_12);
 		
-		JButton btnBack = new JButton("<");
+		btnBack = new JButton("<");
 		btnBack.setBounds(24, 278, 25, 29);
 		frame.getContentPane().add(btnBack);
 		
-		JLabel img3 = new JLabel("");
+		img3 = new JLabel("");
 		img3.setOpaque(true);
 		img3.setBackground(SystemColor.window);
 		img3.setBounds(868, 170, 334, 238);
@@ -282,9 +304,10 @@ public class CartUI extends JFrame {
 		frame.getContentPane().add(remove2);
 		
 		remove1 = new JButton("Remove Item");
+		remove1.setVisible(false);
 		remove1.setOpaque(true);
 		remove1.setFont(new Font("Lucida Grande", Font.PLAIN, 10));
-		remove1.setBackground(new Color(204, 51, 0));
+		remove1.setBackground(SystemColor.window);
 		remove1.setBounds(50, 480, 334, 16);
 		frame.getContentPane().add(remove1);
 		
@@ -386,7 +409,7 @@ public class CartUI extends JFrame {
 			}
 		});
 		
-/****************************** Displaying items in the cart ************************************/
+/****************************** Upon opening this screen ************************************/
 
 		/*
 		 * variables necessary - counter for first item being displayed (p1disp), counter for total items (totalItems), counter for remaining to display(remDisp)
@@ -420,18 +443,31 @@ public class CartUI extends JFrame {
 		 * when next clicked : display next 3 items
 		 */
 		
+	
+		
+		firstThree();
+		
+	
+	
+	
+	}	
+
+	
+	
+	
+	private void firstThree()
+	{
 		JLabel[] imageArr = {img1, img2, img3};
 		JLabel[] prodNameArr = {prod1lbl, prod2lbl, prod3lbl};
 		JLabel[] prodPriceArr = {pprod1lbl, pprod2lbl, pprod3lbl};
 		JButton[] removeBtnArr = {remove1, remove2, remove3};
 		
-		List<Product> myCart = new ArrayList<Product>(); 
+		
 		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
 		
-		int i = 0;
-		int start = 0; //when next is clicked, start will be 3 & end will be 6 (this will continue when the next is clicked again)
-		int totalItems = myCart.size();
-		int end;
+		p1Disp = 0; //element 0 of the arrayList
+		totalItems = myCart.size();
+		p3Disp = 3; 
 		
 
 
@@ -439,24 +475,7 @@ public class CartUI extends JFrame {
 		{
 			btnBack.setVisible(false);
 			btnNext.setVisible(false);
-			
-			end = totalItems;
-			//FIRST THREE ITEMS OF CART
-			for (i = start; i < end; i ++)
-			{
-				//display images
-				myCart.get(i).getImage();
-				java.awt.Image toSet = new ImageIcon(myCart.get(i).getImage()).getImage();
-				imageArr[i].setIcon(new ImageIcon(toSet));
-				
-				//display product name
-				prodNameArr[i].setText(myCart.get(i).getName());
-				
-				//display price
-				prodPriceArr[i].setText("$"+myCart.get(i).getPrice());
-
-				removeBtnArr[i].setVisible(true);
-			}
+			p3Disp = totalItems;
 			
 		}
 		else
@@ -464,12 +483,33 @@ public class CartUI extends JFrame {
 			btnBack.setVisible(true);
 			btnNext.setVisible(true);
 		}
+		
 
+		
+		for (int i = p1Disp; i < p3Disp; i ++)
+		{
+			//display images
+			java.awt.Image imgToSet = new ImageIcon(myCart.get(i).getImage()).getImage();
+			imageArr[i].setIcon(new ImageIcon(imgToSet));
+			
+			//display product name
+			prodNameArr[i].setText(myCart.get(i).getName());
+			
+			//display price
+			prodPriceArr[i].setText("$"+myCart.get(i).getPrice());
+
+			removeBtnArr[i].setVisible(true);
+		}
+		
+
+	}
 	
 	
 	
-	}	
 	
+	
+	
+/********** OPEN FRAME METHOD ***********/	
 	public static void openFrame() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
