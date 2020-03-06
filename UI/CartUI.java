@@ -238,9 +238,6 @@ public class CartUI extends JFrame {
 		total.setBounds(1138, 520, 120, 44);
 		frame.getContentPane().add(total);
 		
-		Cart c = new Cart();
-		
-		total.setText(String.valueOf(c.calcPrice(InCart.inCart)));
 		
 		JButton btnNewButton_1 = new JButton("Pay Now");
 		btnNewButton_1.setFont(new Font("Lucida Grande", Font.PLAIN, 25));
@@ -490,6 +487,20 @@ public class CartUI extends JFrame {
 		/********* next button is clicked *********/
 		btnNext.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//Reset all to invisible
+				for (int x = 0; x <3; x++)
+				{
+					imgArr[x].setVisible(false);
+					
+					nameArr[x].setVisible(false);
+					
+					priceArr[x].setVisible(false);
+					remArr[x].setVisible(false);
+				}
+				
+				
+				
+				
 				
 				
 				remDisp = totalItems-3; //accounting for 3 before, this is the remainder to be displayed on this [age 
@@ -503,7 +514,7 @@ public class CartUI extends JFrame {
 				else
 					p3Disp += 3;
 				
-				dispThree();
+				dispThree(p3Disp);
 			}
 		});
 	}
@@ -539,37 +550,40 @@ public class CartUI extends JFrame {
 		
 
 		
-		dispThree();
+		dispThree(3);
 
 
 	}
 	
-	public void dispThree()
+	public void dispThree(int endNum)
 	{
 		myCart = Cart.cart; //getting items in the cart and assigning it to my cart
-		
+		/*
 		int end;
 		if (totalItems<3)
 		{
-			end = totalItems-p1Disp;
+			end = totalItems;
 		}
 		else 
-			end=3;
+			end=endNum;*/
 		
 		int x = 0; 
-		for (int i = p1Disp; i < p3Disp; i ++)
+		for (int i = p1Disp; i < endNum; i ++)
 		{
 			
 				//display images
+				imgArr[x].setVisible(true);
 				java.awt.Image imgToSet = new ImageIcon(myCart.get(i).getImage()).getImage();
 				imgArr[x].setIcon(new ImageIcon(imgToSet));
 				
 				//display product name
+				nameArr[x].setVisible(true);
 				nameArr[x].setText(myCart.get(i).getName());
 				
 				//display price
+				priceArr[x].setVisible(true);
 				priceArr[x].setText("$"+myCart.get(i).getPrice());
-
+		
 				remArr[x].setVisible(true);
 			x++;
 			
