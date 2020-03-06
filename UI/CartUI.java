@@ -504,15 +504,17 @@ public class CartUI extends JFrame {
 				
 				
 				remDisp = totalItems-3; //accounting for 3 before, this is the remainder to be displayed on this [age 
-				
+				p1Disp += 3;
+
 				if (remDisp<=3) //3 or less items to be displayed at this moment
 				{
 					btnNext.setVisible(false);
-					p1Disp += 3;
 					p3Disp = totalItems;
 				}
 				else
+				{
 					p3Disp += 3;
+				}
 				
 				dispThree(p3Disp);
 			}
@@ -550,7 +552,7 @@ public class CartUI extends JFrame {
 		
 
 		
-		dispThree(3);
+		dispThree(p3Disp);
 
 
 	}
