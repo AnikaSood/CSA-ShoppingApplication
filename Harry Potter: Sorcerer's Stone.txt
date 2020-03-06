@@ -1,5 +1,6 @@
 movies
-narrative/fantasypg
+narrative/fantasy
+pg
 7.99
 2 h 39 m
 harry potter: sorcerer's stone

@@ -197,7 +197,7 @@ public class ProdDescriptUI extends JFrame {
 		prodDescript.setFont(new Font("Lucida Grande", Font.PLAIN, 29));
 		prodDescript.setBackground(UIManager.getColor("Button.background"));
 		prodDescript.setText("The Description Goes Here");
-		prodDescript.setBounds(461, 189, 699, 323);
+		prodDescript.setBounds(461, 189, 699, 365);
 		frame.getContentPane().add(prodDescript);
 
 		
@@ -205,7 +205,7 @@ public class ProdDescriptUI extends JFrame {
 		btnAddToCart.setBackground(Color.ORANGE);
 		btnAddToCart.setBorderPainted(false);
 		btnAddToCart.setOpaque(true);
-		btnAddToCart.setBounds(815, 524, 344, 29);
+		btnAddToCart.setBounds(814, 566, 344, 29);
 		frame.getContentPane().add(btnAddToCart);
 		
 		

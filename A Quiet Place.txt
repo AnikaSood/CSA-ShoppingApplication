@@ -1,5 +1,6 @@
 movies
-drama/thrillerpg-13
+drama/thriller
+pg-13
 8.99
 1 h 31 m
 a quiet place

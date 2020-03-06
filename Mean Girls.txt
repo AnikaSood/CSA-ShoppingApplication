@@ -1,5 +1,6 @@
 movies
-teen/comedypg-13
+teen/comedy
+pg-13
 7.99
 1 h 27 m
 mean girls
