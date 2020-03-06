@@ -584,6 +584,7 @@ public class CartUI extends JFrame {
 			end=endNum;*/
 		
 		int x = 0; 
+		
 		for (int i = p1Disp; i < endNum; i ++)
 		{
 			
